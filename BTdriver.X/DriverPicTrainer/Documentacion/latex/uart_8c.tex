@@ -1,0 +1,125 @@
+\hypertarget{uart_8c}{}\subsection{Referencia del Archivo uart.\+c}
+\label{uart_8c}\index{uart.\+c@{uart.\+c}}
+
+
+Módulo encargado de gestionar las comunicaciones U\+SB.  
+
+
+{\ttfamily \#include $<$xc.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+\subsubsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{uart_8c_a289daf827ed3f7c323e223d80aad5243}{T\+A\+M\+\_\+\+T\+R\+\_\+\+U\+A\+RT}~250\hypertarget{uart_8c_a289daf827ed3f7c323e223d80aad5243}{}\label{uart_8c_a289daf827ed3f7c323e223d80aad5243}
+
+\begin{DoxyCompactList}\small\item\em Tamaño de los vectores y colas. \end{DoxyCompactList}\item 
+\#define {\bfseries T\+A\+M\+\_\+\+R\+E\+C\+\_\+\+U\+A\+RT}~250\hypertarget{uart_8c_a4130981f0b03cd13df0d85858f9579ca}{}\label{uart_8c_a4130981f0b03cd13df0d85858f9579ca}
+
+\item 
+\#define \hyperlink{uart_8c_a7e738a239c9c1353d405b6c620076452}{P\+R\+\_\+\+I\+N\+T\+\_\+\+TX}~5\hypertarget{uart_8c_a7e738a239c9c1353d405b6c620076452}{}\label{uart_8c_a7e738a239c9c1353d405b6c620076452}
+
+\begin{DoxyCompactList}\small\item\em Prioridad de las interrupciones (máx. 7 -\/ mín. 1) \end{DoxyCompactList}\item 
+\#define {\bfseries P\+R\+\_\+\+I\+N\+T\+\_\+\+RX}~6\hypertarget{uart_8c_aaf20b0943836c3d5cda94ca4b93ef6d4}{}\label{uart_8c_aaf20b0943836c3d5cda94ca4b93ef6d4}
+
+\end{DoxyCompactItemize}
+\subsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{uart_8c_a226557d5e42f7e29ddaff30606138459}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((interrupt, no\+\_\+auto\+\_\+psv))
+\item 
+void \hyperlink{uart_8c_a6a7d3704f4003f24c153132ae7c2ab48}{procesar\+U\+A\+RT} (void)
+\item 
+void \hyperlink{uart_8c_a03ee62d5252023815431d5f678826f24}{puts\+U\+A\+RT} (char $\ast$pcad)
+\item 
+char \hyperlink{uart_8c_a57eb82c6172d899160c66fb5d1df50df}{getchar\+U\+A\+RT} (void)
+\item 
+void \hyperlink{uart_8c_a2b43a2b93a99a476704f0a1f3f49d582}{poner\+En\+Cola\+Transmision\+U\+A\+RT} (unsigned char uc\+\_\+caracter)
+\item 
+void \hyperlink{uart_8c_a41a9cc3e2b0b53b35d550f448371bb22}{transmitir\+U\+A\+RT} (void)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Descripción detallada}
+Módulo encargado de gestionar las comunicaciones U\+SB. 
+
+\begin{DoxyAuthor}{Autor}
+Jaime Boal Martín-\/\+Larrauri, José Daniel Muñoz Frías
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+1.\+0
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+08/09/2015 
+\end{DoxyDate}
+
+
+\subsubsection{Documentación de las funciones}
+\index{uart.\+c@{uart.\+c}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!uart.\+c@{uart.\+c}}
+\paragraph[{\texorpdfstring{\+\_\+\+\_\+attribute\+\_\+\+\_\+((interrupt, no\+\_\+auto\+\_\+psv))}{__attribute__((interrupt, no_auto_psv))}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+\_\+attribute\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{(interrupt, no\+\_\+auto\+\_\+psv)}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8c_a226557d5e42f7e29ddaff30606138459}{}\label{uart_8c_a226557d5e42f7e29ddaff30606138459}
+Rutina de atención a la interrupción de la U\+A\+RT asociada a la transmisión.
+
+Rutina de atención a la interrupción de la U\+A\+RT asociada a la recepción.
+
+La rutina introduce el caracter recibido en la cola sólo si ésta no está llena. Si lo está enciende el L\+ED R\+B12 de la tarjeta para avisar al usuario. en este caso el caracter recibido por la interrupción se pierde. \index{uart.\+c@{uart.\+c}!getchar\+U\+A\+RT@{getchar\+U\+A\+RT}}
+\index{getchar\+U\+A\+RT@{getchar\+U\+A\+RT}!uart.\+c@{uart.\+c}}
+\paragraph[{\texorpdfstring{getchar\+U\+A\+R\+T(void)}{getcharUART(void)}}]{\setlength{\rightskip}{0pt plus 5cm}char getchar\+U\+A\+RT (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8c_a57eb82c6172d899160c66fb5d1df50df}{}\label{uart_8c_a57eb82c6172d899160c66fb5d1df50df}
+Obtiene un caracter de la U\+A\+RT si hay alguno disponible. Si no obtiene un \textbackslash{}0
+
+\begin{DoxyReturn}{Devuelve}
+char leído de la cola de recepción de la U\+A\+RT o \textbackslash{}0 si la cola está vacía. 
+\end{DoxyReturn}
+\index{uart.\+c@{uart.\+c}!poner\+En\+Cola\+Transmision\+U\+A\+RT@{poner\+En\+Cola\+Transmision\+U\+A\+RT}}
+\index{poner\+En\+Cola\+Transmision\+U\+A\+RT@{poner\+En\+Cola\+Transmision\+U\+A\+RT}!uart.\+c@{uart.\+c}}
+\paragraph[{\texorpdfstring{poner\+En\+Cola\+Transmision\+U\+A\+R\+T(unsigned char uc\+\_\+caracter)}{ponerEnColaTransmisionUART(unsigned char uc_caracter)}}]{\setlength{\rightskip}{0pt plus 5cm}void poner\+En\+Cola\+Transmision\+U\+A\+RT (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{uc\+\_\+caracter}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8c_a2b43a2b93a99a476704f0a1f3f49d582}{}\label{uart_8c_a2b43a2b93a99a476704f0a1f3f49d582}
+Coloca un dato en la cola de transmisión.
+
+La función introduce el carácter en la cola sólo si ésta no está llena. Si lo está enciende el L\+ED R\+B12 de la tarjeta para avisar al usuario. En este caso el caracter enviado a la función se pierde.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em uc\+\_\+caracter} & Caracter que se quiere poner en cola. \\
+\hline
+\end{DoxyParams}
+\index{uart.\+c@{uart.\+c}!procesar\+U\+A\+RT@{procesar\+U\+A\+RT}}
+\index{procesar\+U\+A\+RT@{procesar\+U\+A\+RT}!uart.\+c@{uart.\+c}}
+\paragraph[{\texorpdfstring{procesar\+U\+A\+R\+T(void)}{procesarUART(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void procesar\+U\+A\+RT (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8c_a6a7d3704f4003f24c153132ae7c2ab48}{}\label{uart_8c_a6a7d3704f4003f24c153132ae7c2ab48}
+Procesa los mensajes recibidos a través del puerto U\+SB. \index{uart.\+c@{uart.\+c}!puts\+U\+A\+RT@{puts\+U\+A\+RT}}
+\index{puts\+U\+A\+RT@{puts\+U\+A\+RT}!uart.\+c@{uart.\+c}}
+\paragraph[{\texorpdfstring{puts\+U\+A\+R\+T(char $\ast$pcad)}{putsUART(char *pcad)}}]{\setlength{\rightskip}{0pt plus 5cm}void puts\+U\+A\+RT (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pcad}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8c_a03ee62d5252023815431d5f678826f24}{}\label{uart_8c_a03ee62d5252023815431d5f678826f24}
+Transmite una cadena de caracteres por la U\+A\+RT.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em pcad} & cadena de caracteres a transmitir \\
+\hline
+\end{DoxyParams}
+\index{uart.\+c@{uart.\+c}!transmitir\+U\+A\+RT@{transmitir\+U\+A\+RT}}
+\index{transmitir\+U\+A\+RT@{transmitir\+U\+A\+RT}!uart.\+c@{uart.\+c}}
+\paragraph[{\texorpdfstring{transmitir\+U\+A\+R\+T(void)}{transmitirUART(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void transmitir\+U\+A\+RT (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8c_a41a9cc3e2b0b53b35d550f448371bb22}{}\label{uart_8c_a41a9cc3e2b0b53b35d550f448371bb22}
+Envía todos los datos almacenados en la cola de transmisión. 

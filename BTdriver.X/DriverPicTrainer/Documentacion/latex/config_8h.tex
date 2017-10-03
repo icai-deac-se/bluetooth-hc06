@@ -1,0 +1,45 @@
+\hypertarget{config_8h}{}\subsection{Referencia del Archivo config.\+h}
+\label{config_8h}\index{config.\+h@{config.\+h}}
+
+
+Funciones de configuración del microcontrolador.  
+
+
+\subsubsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{config_8h_a99d7c812ba23bfdba5d29ec2fddf1e83}{F\+CY}~39613750\hypertarget{config_8h_a99d7c812ba23bfdba5d29ec2fddf1e83}{}\label{config_8h_a99d7c812ba23bfdba5d29ec2fddf1e83}
+
+\begin{DoxyCompactList}\small\item\em Frecuencia de operacion del microprocesador (Hz) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{config_8h_aaf223831f87a8656f76f9fb5b7c1b948}{inicializar\+Reloj} (void)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Descripción detallada}
+Funciones de configuración del microcontrolador. 
+
+\begin{DoxyAuthor}{Autor}
+Jaime Boal Martín-\/\+Larrauri
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+2.\+0.\+0
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+26/08/2016 
+\end{DoxyDate}
+
+
+\subsubsection{Documentación de las funciones}
+\index{config.\+h@{config.\+h}!inicializar\+Reloj@{inicializar\+Reloj}}
+\index{inicializar\+Reloj@{inicializar\+Reloj}!config.\+h@{config.\+h}}
+\paragraph[{\texorpdfstring{inicializar\+Reloj(void)}{inicializarReloj(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void inicializar\+Reloj (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{config_8h_aaf223831f87a8656f76f9fb5b7c1b948}{}\label{config_8h_aaf223831f87a8656f76f9fb5b7c1b948}
+Inicializa el reloj interno F\+RC con P\+LL.
+
+Configura la frecuencia del oscilador F\+RC (F\+O\+SC), cuya frecuencia nominal (Fin) son 7.\+37 M\+Hz, para que el microprocesador opere a 40 M\+I\+PS (F\+CY). F\+O\+SC = Fin $\ast$ M/(N1$\ast$\+N2) F\+CY = F\+O\+S\+C/2 F\+O\+SC = 79.\+2275 M\+Hz F\+CY = 39.\+61375 M\+Hz 

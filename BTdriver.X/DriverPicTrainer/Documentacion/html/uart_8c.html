@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Drivers PicTrainer: Referencia del Archivo uart.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drivers PicTrainer
+   </div>
+   <div id="projectbrief">Drivers para la tarjeta PicTrainer</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">'defines'</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo uart.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Módulo encargado de gestionar las comunicaciones USB.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;xc.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="uart_8h_source.html">uart.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="config_8h_source.html">config.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+'defines'</h2></td></tr>
+<tr class="memitem:a289daf827ed3f7c323e223d80aad5243"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a289daf827ed3f7c323e223d80aad5243"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a289daf827ed3f7c323e223d80aad5243">TAM_TR_UART</a>&#160;&#160;&#160;250</td></tr>
+<tr class="memdesc:a289daf827ed3f7c323e223d80aad5243"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tamaño de los vectores y colas. <br /></td></tr>
+<tr class="separator:a289daf827ed3f7c323e223d80aad5243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4130981f0b03cd13df0d85858f9579ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4130981f0b03cd13df0d85858f9579ca"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TAM_REC_UART</b>&#160;&#160;&#160;250</td></tr>
+<tr class="separator:a4130981f0b03cd13df0d85858f9579ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e738a239c9c1353d405b6c620076452"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e738a239c9c1353d405b6c620076452"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a7e738a239c9c1353d405b6c620076452">PR_INT_TX</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:a7e738a239c9c1353d405b6c620076452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prioridad de las interrupciones (máx. 7 - mín. 1) <br /></td></tr>
+<tr class="separator:a7e738a239c9c1353d405b6c620076452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf20b0943836c3d5cda94ca4b93ef6d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf20b0943836c3d5cda94ca4b93ef6d4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PR_INT_RX</b>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:aaf20b0943836c3d5cda94ca4b93ef6d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a226557d5e42f7e29ddaff30606138459"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a226557d5e42f7e29ddaff30606138459">__attribute__</a> ((interrupt, no_auto_psv))</td></tr>
+<tr class="separator:a226557d5e42f7e29ddaff30606138459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a7d3704f4003f24c153132ae7c2ab48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a6a7d3704f4003f24c153132ae7c2ab48">procesarUART</a> (void)</td></tr>
+<tr class="separator:a6a7d3704f4003f24c153132ae7c2ab48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03ee62d5252023815431d5f678826f24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a03ee62d5252023815431d5f678826f24">putsUART</a> (char *pcad)</td></tr>
+<tr class="separator:a03ee62d5252023815431d5f678826f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57eb82c6172d899160c66fb5d1df50df"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a57eb82c6172d899160c66fb5d1df50df">getcharUART</a> (void)</td></tr>
+<tr class="separator:a57eb82c6172d899160c66fb5d1df50df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b43a2b93a99a476704f0a1f3f49d582"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a2b43a2b93a99a476704f0a1f3f49d582">ponerEnColaTransmisionUART</a> (unsigned char uc_caracter)</td></tr>
+<tr class="separator:a2b43a2b93a99a476704f0a1f3f49d582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a9cc3e2b0b53b35d550f448371bb22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a41a9cc3e2b0b53b35d550f448371bb22">transmitirUART</a> (void)</td></tr>
+<tr class="separator:a41a9cc3e2b0b53b35d550f448371bb22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Módulo encargado de gestionar las comunicaciones USB. </p>
+<dl class="section author"><dt>Autor</dt><dd>Jaime Boal Martín-Larrauri, José Daniel Muñoz Frías</dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>1.1.0</dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>08/09/2015 </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a226557d5e42f7e29ddaff30606138459"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __attribute__ </td>
+          <td>(</td>
+          <td class="paramtype">(interrupt, no_auto_psv)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Rutina de atención a la interrupción de la UART asociada a la transmisión.</p>
+<p>Rutina de atención a la interrupción de la UART asociada a la recepción.</p>
+<p>La rutina introduce el caracter recibido en la cola sólo si ésta no está llena. Si lo está enciende el LED RB12 de la tarjeta para avisar al usuario. en este caso el caracter recibido por la interrupción se pierde. </p>
+
+</div>
+</div>
+<a class="anchor" id="a57eb82c6172d899160c66fb5d1df50df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char getcharUART </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Obtiene un caracter de la UART si hay alguno disponible. Si no obtiene un \0</p>
+<dl class="section return"><dt>Devuelve</dt><dd>char leído de la cola de recepción de la UART o \0 si la cola está vacía. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2b43a2b93a99a476704f0a1f3f49d582"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ponerEnColaTransmisionUART </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>uc_caracter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Coloca un dato en la cola de transmisión.</p>
+<p>La función introduce el carácter en la cola sólo si ésta no está llena. Si lo está enciende el LED RB12 de la tarjeta para avisar al usuario. En este caso el caracter enviado a la función se pierde.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">uc_caracter</td><td>Caracter que se quiere poner en cola. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6a7d3704f4003f24c153132ae7c2ab48"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void procesarUART </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Procesa los mensajes recibidos a través del puerto USB. </p>
+
+</div>
+</div>
+<a class="anchor" id="a03ee62d5252023815431d5f678826f24"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void putsUART </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcad</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Transmite una cadena de caracteres por la UART.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pcad</td><td>cadena de caracteres a transmitir </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a41a9cc3e2b0b53b35d550f448371bb22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void transmitirUART </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Envía todos los datos almacenados en la cola de transmisión. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Viernes, 16 de Septiembre de 2016 10:09:12 para Drivers PicTrainer por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

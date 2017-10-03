@@ -1,0 +1,57 @@
+\hypertarget{Idle_8h}{}\subsection{Referencia del Archivo Idle.\+h}
+\label{Idle_8h}\index{Idle.\+h@{Idle.\+h}}
+
+
+Funciones de manejo de la tarea Idle para un sistema basado en bucle de scan. Dicha tarea usa el timer 1 para llevar a cabo la temporización del bucle.  
+
+
+\subsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Idle_8h_a0192101c303fa234e5ca0dd8861a7176}{inicializar\+Tarea\+Idle} (unsigned int t\+\_\+s)
+\item 
+void \hyperlink{Idle_8h_a9073f9904cd84a53cf05a5ec72051c7d}{tarea\+Idle} (void)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Descripción detallada}
+Funciones de manejo de la tarea Idle para un sistema basado en bucle de scan. Dicha tarea usa el timer 1 para llevar a cabo la temporización del bucle. 
+
+\begin{DoxyAuthor}{Autor}
+José Daniel Muñoz Frías
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+0.\+1
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+08/09/2015 
+\end{DoxyDate}
+
+
+\subsubsection{Documentación de las funciones}
+\index{Idle.\+h@{Idle.\+h}!inicializar\+Tarea\+Idle@{inicializar\+Tarea\+Idle}}
+\index{inicializar\+Tarea\+Idle@{inicializar\+Tarea\+Idle}!Idle.\+h@{Idle.\+h}}
+\paragraph[{\texorpdfstring{inicializar\+Tarea\+Idle(unsigned int t\+\_\+s)}{inicializarTareaIdle(unsigned int t_s)}}]{\setlength{\rightskip}{0pt plus 5cm}void inicializar\+Tarea\+Idle (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{t\+\_\+s}
+\end{DoxyParamCaption}
+)}\hypertarget{Idle_8h_a0192101c303fa234e5ca0dd8861a7176}{}\label{Idle_8h_a0192101c303fa234e5ca0dd8861a7176}
+Inicializa la tarea Idle para usar el periodo de muestreo t\+\_\+s
+
+En un sistema basado en bucle de scan es necesario usar un timer para que las iteraciones del bucle duren siempre lo mismo. Esta función inicializa el timer 1 con un periodo igual a t\+\_\+s. Cuando se llame a la función Tarea\+Idle, ésta esperará al final de dicho periodo. Ojo, el valor máximo del periodo de muestreo es de 423,5 ms; ya que es el máximo valor que puede contar el timer 1 sin rebosar.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em t\_s} & periodo de muestreo en décimas de ms. El valor máximo es de 4235, ya que es el valor máximo que puede contar el timer 1 usando un prescaler de 256 sin rebosar. \\
+\hline
+\end{DoxyParams}
+\index{Idle.\+h@{Idle.\+h}!tarea\+Idle@{tarea\+Idle}}
+\index{tarea\+Idle@{tarea\+Idle}!Idle.\+h@{Idle.\+h}}
+\paragraph[{\texorpdfstring{tarea\+Idle(void)}{tareaIdle(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void tarea\+Idle (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{Idle_8h_a9073f9904cd84a53cf05a5ec72051c7d}{}\label{Idle_8h_a9073f9904cd84a53cf05a5ec72051c7d}
+Tarea Idle del bucle de scan
+
+Esta tarea se queda bloqueada hasta el final del periodo de muestreo, marcado por el final de cuenta del timer 1. El periodo de muestreo se define con la llamada a Inicializar\+Tarea\+Idle(). 

@@ -1,0 +1,121 @@
+\begin{theindex}
+
+  \item {\+\_\+\+\_\+attribute\+\_\+\+\_\+}
+    \subitem {uart.\+c}, \hyperpage{13}
+
+  \indexspace
+
+  \item {activar\+P\+WM}
+    \subitem {pwm.\+c}, \hyperpage{9}
+    \subitem {pwm.\+h}, \hyperpage{11}
+  \item {adc.\+c}, \hyperpage{3}
+    \subitem {inicializar\+A\+D\+C\+Polling}, \hyperpage{3}
+    \subitem {leer\+A\+D\+C\+Polling}, \hyperpage{4}
+  \item {adc.\+h}, \hyperpage{4}
+    \subitem {inicializar\+A\+D\+C\+Polling}, \hyperpage{4}
+    \subitem {leer\+A\+D\+C\+Polling}, \hyperpage{5}
+
+  \indexspace
+
+  \item {config.\+c}, \hyperpage{5}
+    \subitem {inicializar\+Reloj}, \hyperpage{6}
+  \item {config.\+h}, \hyperpage{6}
+    \subitem {inicializar\+Reloj}, \hyperpage{6}
+
+  \indexspace
+
+  \item {desactivar\+P\+WM}
+    \subitem {pwm.\+c}, \hyperpage{10}
+    \subitem {pwm.\+h}, \hyperpage{12}
+
+  \indexspace
+
+  \item {getchar\+U\+A\+RT}
+    \subitem {uart.\+c}, \hyperpage{13}
+    \subitem {uart.\+h}, \hyperpage{15}
+
+  \indexspace
+
+  \item {idle.\+c}, \hyperpage{7}
+    \subitem {inicializar\+Tarea\+Idle}, \hyperpage{7}
+    \subitem {tarea\+Idle}, \hyperpage{7}
+  \item {idle.\+h}, \hyperpage{8}
+    \subitem {inicializar\+Tarea\+Idle}, \hyperpage{8}
+    \subitem {tarea\+Idle}, \hyperpage{9}
+  \item {inicializar\+A\+D\+C\+Polling}
+    \subitem {adc.\+c}, \hyperpage{3}
+    \subitem {adc.\+h}, \hyperpage{4}
+  \item {inicializar\+P\+WM}
+    \subitem {pwm.\+c}, \hyperpage{10}
+    \subitem {pwm.\+h}, \hyperpage{12}
+  \item {inicializar\+Reloj}
+    \subitem {config.\+c}, \hyperpage{6}
+    \subitem {config.\+h}, \hyperpage{6}
+  \item {inicializar\+Tarea\+Idle}
+    \subitem {idle.\+c}, \hyperpage{7}
+    \subitem {idle.\+h}, \hyperpage{8}
+  \item {inicializar\+U\+A\+RT}
+    \subitem {uart.\+h}, \hyperpage{15}
+
+  \indexspace
+
+  \item {leer\+A\+D\+C\+Polling}
+    \subitem {adc.\+c}, \hyperpage{4}
+    \subitem {adc.\+h}, \hyperpage{5}
+
+  \indexspace
+
+  \item {poner\+En\+Cola\+Transmision\+U\+A\+RT}
+    \subitem {uart.\+c}, \hyperpage{14}
+  \item {procesar\+U\+A\+RT}
+    \subitem {uart.\+c}, \hyperpage{14}
+    \subitem {uart.\+h}, \hyperpage{15}
+  \item {puts\+U\+A\+RT}
+    \subitem {uart.\+c}, \hyperpage{14}
+    \subitem {uart.\+h}, \hyperpage{16}
+  \item {pwm.\+c}, \hyperpage{9}
+    \subitem {activar\+P\+WM}, \hyperpage{9}
+    \subitem {desactivar\+P\+WM}, \hyperpage{10}
+    \subitem {inicializar\+P\+WM}, \hyperpage{10}
+    \subitem {set\+Dc\+P\+WM}, \hyperpage{10}
+    \subitem {set\+Frecuencia}, \hyperpage{11}
+  \item {pwm.\+h}, \hyperpage{11}
+    \subitem {activar\+P\+WM}, \hyperpage{11}
+    \subitem {desactivar\+P\+WM}, \hyperpage{12}
+    \subitem {inicializar\+P\+WM}, \hyperpage{12}
+    \subitem {set\+Dc\+P\+WM}, \hyperpage{12}
+    \subitem {set\+Frecuencia}, \hyperpage{12}
+
+  \indexspace
+
+  \item {set\+Dc\+P\+WM}
+    \subitem {pwm.\+c}, \hyperpage{10}
+    \subitem {pwm.\+h}, \hyperpage{12}
+  \item {set\+Frecuencia}
+    \subitem {pwm.\+c}, \hyperpage{11}
+    \subitem {pwm.\+h}, \hyperpage{12}
+
+  \indexspace
+
+  \item {tarea\+Idle}
+    \subitem {idle.\+c}, \hyperpage{7}
+    \subitem {idle.\+h}, \hyperpage{9}
+  \item {transmitir\+U\+A\+RT}
+    \subitem {uart.\+c}, \hyperpage{14}
+
+  \indexspace
+
+  \item {uart.\+c}, \hyperpage{12}
+    \subitem {\+\_\+\+\_\+attribute\+\_\+\+\_\+}, \hyperpage{13}
+    \subitem {getchar\+U\+A\+RT}, \hyperpage{13}
+    \subitem {poner\+En\+Cola\+Transmision\+U\+A\+RT}, \hyperpage{14}
+    \subitem {procesar\+U\+A\+RT}, \hyperpage{14}
+    \subitem {puts\+U\+A\+RT}, \hyperpage{14}
+    \subitem {transmitir\+U\+A\+RT}, \hyperpage{14}
+  \item {uart.\+h}, \hyperpage{14}
+    \subitem {getchar\+U\+A\+RT}, \hyperpage{15}
+    \subitem {inicializar\+U\+A\+RT}, \hyperpage{15}
+    \subitem {procesar\+U\+A\+RT}, \hyperpage{15}
+    \subitem {puts\+U\+A\+RT}, \hyperpage{16}
+
+\end{theindex}

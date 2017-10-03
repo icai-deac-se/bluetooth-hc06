@@ -1,0 +1,86 @@
+\hypertarget{uart_8h}{}\subsection{Referencia del Archivo uart.\+h}
+\label{uart_8h}\index{uart.\+h@{uart.\+h}}
+
+
+Módulo encargado de gestionar las comunicaciones U\+SB.  
+
+
+\subsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{uart_8h_ad1ae8084f22da4a58d362f4ec515b49c}{inicializar\+U\+A\+RT} (unsigned long baudrate)
+\item 
+void \hyperlink{uart_8h_a6a7d3704f4003f24c153132ae7c2ab48}{procesar\+U\+A\+RT} (void)
+\item 
+void \hyperlink{uart_8h_a03ee62d5252023815431d5f678826f24}{puts\+U\+A\+RT} (char $\ast$pcad)
+\item 
+char \hyperlink{uart_8h_a57eb82c6172d899160c66fb5d1df50df}{getchar\+U\+A\+RT} (void)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Descripción detallada}
+Módulo encargado de gestionar las comunicaciones U\+SB. 
+
+\begin{DoxyAuthor}{Autor}
+Jaime Boal Martín-\/\+Larrauri, José Daniel Muñoz Frías
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+1.\+0
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+08/09/2015 
+\end{DoxyDate}
+
+
+\subsubsection{Documentación de las funciones}
+\index{uart.\+h@{uart.\+h}!getchar\+U\+A\+RT@{getchar\+U\+A\+RT}}
+\index{getchar\+U\+A\+RT@{getchar\+U\+A\+RT}!uart.\+h@{uart.\+h}}
+\paragraph[{\texorpdfstring{getchar\+U\+A\+R\+T(void)}{getcharUART(void)}}]{\setlength{\rightskip}{0pt plus 5cm}char getchar\+U\+A\+RT (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8h_a57eb82c6172d899160c66fb5d1df50df}{}\label{uart_8h_a57eb82c6172d899160c66fb5d1df50df}
+Obtiene un caracter de la U\+A\+RT si hay alguno disponible. Si no obtiene un \textbackslash{}0
+
+\begin{DoxyReturn}{Devuelve}
+char leído de la cola de recepción de la U\+A\+RT o \textbackslash{}0 si la cola está vacía. 
+\end{DoxyReturn}
+\index{uart.\+h@{uart.\+h}!inicializar\+U\+A\+RT@{inicializar\+U\+A\+RT}}
+\index{inicializar\+U\+A\+RT@{inicializar\+U\+A\+RT}!uart.\+h@{uart.\+h}}
+\paragraph[{\texorpdfstring{inicializar\+U\+A\+R\+T(unsigned long baudrate)}{inicializarUART(unsigned long baudrate)}}]{\setlength{\rightskip}{0pt plus 5cm}void inicializar\+U\+A\+RT (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{baudrate}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8h_ad1ae8084f22da4a58d362f4ec515b49c}{}\label{uart_8h_ad1ae8084f22da4a58d362f4ec515b49c}
+Inicializa la U\+A\+RT.
+
+Se inicializa la U\+A\+RT para usar una trama de 8 bits de datos sin paridad y con un bit de stop. El módulo usa interrupciones tanto para la recepción como para la transmisión. La comunicación con las rutinas de interrupción se realiza mediante dos colas.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em baudrate} & Baudrate de la uart en baudios \\
+\hline
+\end{DoxyParams}
+\index{uart.\+h@{uart.\+h}!procesar\+U\+A\+RT@{procesar\+U\+A\+RT}}
+\index{procesar\+U\+A\+RT@{procesar\+U\+A\+RT}!uart.\+h@{uart.\+h}}
+\paragraph[{\texorpdfstring{procesar\+U\+A\+R\+T(void)}{procesarUART(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void procesar\+U\+A\+RT (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8h_a6a7d3704f4003f24c153132ae7c2ab48}{}\label{uart_8h_a6a7d3704f4003f24c153132ae7c2ab48}
+Procesa los mensajes recibidos a través del puerto U\+SB. 
+\newpage
+\index{uart.\+h@{uart.\+h}!puts\+U\+A\+RT@{puts\+U\+A\+RT}}
+\index{puts\+U\+A\+RT@{puts\+U\+A\+RT}!uart.\+h@{uart.\+h}}
+\paragraph[{\texorpdfstring{puts\+U\+A\+R\+T(char $\ast$pcad)}{putsUART(char *pcad)}}]{\setlength{\rightskip}{0pt plus 5cm}void puts\+U\+A\+RT (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pcad}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8h_a03ee62d5252023815431d5f678826f24}{}\label{uart_8h_a03ee62d5252023815431d5f678826f24}
+Transmite una cadena de caracteres por la U\+A\+RT.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em pcad} & cadena de caracteres a transmitir \\
+\hline
+\end{DoxyParams}

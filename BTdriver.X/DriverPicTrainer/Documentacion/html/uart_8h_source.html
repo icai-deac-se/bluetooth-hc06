@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Drivers PicTrainer: Fichero Fuente uart.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drivers PicTrainer
+   </div>
+   <div id="projectbrief">Drivers para la tarjeta PicTrainer</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">uart.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="uart_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// -----------------------------------------------------------------------------</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// -- INTERFAZ DEL MÓDULO UART (Universal Asynchronous Receiver Transmitter) ---</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// -----------------------------------------------------------------------------</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// -----------------------------------------------------------------------------</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef _UART_H</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define _UART_H</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// -----------------------------------------------------------------------------</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// ------------------- PROTOTIPOS DE LAS FUNCIONES PÚBLICAS --------------------</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// -----------------------------------------------------------------------------</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="uart_8h.html#ad1ae8084f22da4a58d362f4ec515b49c">inicializarUART</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> baudrate);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// -----------------------------------------------------------------------------</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> <a class="code" href="uart_8h.html#a6a7d3704f4003f24c153132ae7c2ab48">procesarUART</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> <a class="code" href="uart_8h.html#a03ee62d5252023815431d5f678826f24">putsUART</a>(<span class="keywordtype">char</span> *pcad);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">char</span> <a class="code" href="uart_8h.html#a57eb82c6172d899160c66fb5d1df50df">getcharUART</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="uart_8h_html_a03ee62d5252023815431d5f678826f24"><div class="ttname"><a href="uart_8h.html#a03ee62d5252023815431d5f678826f24">putsUART</a></div><div class="ttdeci">void putsUART(char *pcad)</div><div class="ttdef"><b>Definition:</b> uart.c:108</div></div>
+<div class="ttc" id="uart_8h_html_a57eb82c6172d899160c66fb5d1df50df"><div class="ttname"><a href="uart_8h.html#a57eb82c6172d899160c66fb5d1df50df">getcharUART</a></div><div class="ttdeci">char getcharUART(void)</div><div class="ttdef"><b>Definition:</b> uart.c:116</div></div>
+<div class="ttc" id="uart_8h_html_ad1ae8084f22da4a58d362f4ec515b49c"><div class="ttname"><a href="uart_8h.html#ad1ae8084f22da4a58d362f4ec515b49c">inicializarUART</a></div><div class="ttdeci">void inicializarUART(unsigned long baudrate)</div></div>
+<div class="ttc" id="uart_8h_html_a6a7d3704f4003f24c153132ae7c2ab48"><div class="ttname"><a href="uart_8h.html#a6a7d3704f4003f24c153132ae7c2ab48">procesarUART</a></div><div class="ttdeci">void procesarUART(void)</div><div class="ttdef"><b>Definition:</b> uart.c:98</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Viernes, 16 de Septiembre de 2016 10:09:12 para Drivers PicTrainer por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

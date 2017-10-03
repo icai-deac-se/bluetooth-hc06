@@ -1,0 +1,19 @@
+/*! \mainpage Driver de la tarjeta PicTrainer V3
+ *
+ * \section intro_sec Introducción
+ *
+ * Este driver facilita el manejo de la tarjeta PicTrainer V3. El driver
+ * incluye módulos para manejar el ADC, el PWM, la UART y para implantar
+ * un bucle de scan con una tarea idle que controla el periodo del bucle.
+ *
+ * En la pestaña Archivos encontrará la documentación de cada uno de estos
+ * módulos.
+ *
+ * \section install_sec Instalación
+ *
+ * Se recomienda descomprimir la carpeta en el directorio raiz de sus proyectos
+ * y añadir la carpeta al entorno de desarrollo MPLAB X. En este caso para usar
+ * cada módulo ha de incluir su .h de la forma:
+ * #include "../DriverPicTrainer/adc.h"
+ *  
+ */

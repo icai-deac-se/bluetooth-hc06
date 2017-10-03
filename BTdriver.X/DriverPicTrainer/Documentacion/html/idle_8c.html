@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Drivers PicTrainer: Referencia del Archivo idle.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drivers PicTrainer
+   </div>
+   <div id="projectbrief">Drivers para la tarjeta PicTrainer</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo idle.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Funciones de manejo de la tarea Idle para un sistema basado en bucle de scan. Dicha tarea usa el timer 1 para llevar a cabo la temporización del bucle.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;xc.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="config_8h_source.html">config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="idle_8h_source.html">idle.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a0192101c303fa234e5ca0dd8861a7176"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="idle_8c.html#a0192101c303fa234e5ca0dd8861a7176">inicializarTareaIdle</a> (unsigned int t_s)</td></tr>
+<tr class="separator:a0192101c303fa234e5ca0dd8861a7176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9073f9904cd84a53cf05a5ec72051c7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="idle_8c.html#a9073f9904cd84a53cf05a5ec72051c7d">tareaIdle</a> (void)</td></tr>
+<tr class="separator:a9073f9904cd84a53cf05a5ec72051c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Funciones de manejo de la tarea Idle para un sistema basado en bucle de scan. Dicha tarea usa el timer 1 para llevar a cabo la temporización del bucle. </p>
+<dl class="section author"><dt>Autor</dt><dd>José Daniel Muñoz Frías</dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>1.0.1</dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>08/09/2015 </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a0192101c303fa234e5ca0dd8861a7176"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void inicializarTareaIdle </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>t_s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inicializa la tarea Idle para usar el periodo de muestreo t_s</p>
+<p>En un sistema basado en bucle de scan es necesario usar un timer para que las iteraciones del bucle duren siempre lo mismo. Esta función inicializa el timer 1 con un periodo igual a t_s. Cuando se llame a la función TareaIdle, ésta esperará al final de dicho periodo. Ojo, el valor máximo del periodo de muestreo es de 423,5 ms; ya que es el máximo valor que puede contar el timer 1 sin rebosar.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">t_s</td><td>periodo de muestreo en décimas de ms. El valor máximo es de 4235, ya que es el valor máximo que puede contar el timer 1 usando un prescaler de 256 sin rebosar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9073f9904cd84a53cf05a5ec72051c7d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tareaIdle </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tarea Idle del bucle de scan</p>
+<p>Esta tarea se queda bloqueada hasta el final del periodo de muestreo, marcado por el final de cuenta del timer 1. El periodo de muestreo se define con la llamada a InicializarTareaIdle(). </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Viernes, 16 de Septiembre de 2016 10:09:12 para Drivers PicTrainer por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

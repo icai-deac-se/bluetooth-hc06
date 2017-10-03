@@ -1,0 +1,115 @@
+\hypertarget{pwm_8c}{}\subsection{Referencia del Archivo pwm.\+c}
+\label{pwm_8c}\index{pwm.\+c@{pwm.\+c}}
+
+
+Módulo encargado de generar señales de P\+WM usando el módulo P\+WM del microcontrolador.  
+
+
+{\ttfamily \#include $<$xc.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}pwm.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+\subsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{pwm_8c_aa46cff0fd08be05cfe4d15c2b3d828d9}{inicializar\+P\+WM} (unsigned int bit\+\_\+map, unsigned int frecuencia)
+\item 
+void \hyperlink{pwm_8c_ac1b5063b5ef6a2406929e8667b941742}{set\+Frecuencia} (unsigned int frecuencia)
+\item 
+void \hyperlink{pwm_8c_a3ddad0465dbdbfad996a6fe4fac04975}{set\+Dc\+P\+WM} (unsigned int bit\+\_\+map, unsigned int dc)
+\item 
+void \hyperlink{pwm_8c_a9b27e44fb14cfb936df6477aa05680d3}{activar\+P\+WM} (unsigned int bit\+\_\+map)
+\item 
+void \hyperlink{pwm_8c_af59fba07bca44a73bf605f6cb5bda952}{desactivar\+P\+WM} (unsigned int bit\+\_\+map)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Descripción detallada}
+Módulo encargado de generar señales de P\+WM usando el módulo P\+WM del microcontrolador. 
+
+\begin{DoxyAuthor}{Autor}
+Jaime Boal Martín-\/\+Larrauri, José Daniel Muñoz Frías
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+0.\+1
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+07/09/2015 
+\end{DoxyDate}
+
+
+\subsubsection{Documentación de las funciones}
+\index{pwm.\+c@{pwm.\+c}!activar\+P\+WM@{activar\+P\+WM}}
+\index{activar\+P\+WM@{activar\+P\+WM}!pwm.\+c@{pwm.\+c}}
+\paragraph[{\texorpdfstring{activar\+P\+W\+M(unsigned int bit\+\_\+map)}{activarPWM(unsigned int bit_map)}}]{\setlength{\rightskip}{0pt plus 5cm}void activar\+P\+WM (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{bit\+\_\+map}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm_8c_a9b27e44fb14cfb936df6477aa05680d3}{}\label{pwm_8c_a9b27e44fb14cfb936df6477aa05680d3}
+Activa las salidas P\+WM indicadas mediante el parámetro bit\+\_\+map.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em bit\+\_\+map} & Indica qué pines se activan. Por ejemplo si se desean activar los pines R\+B15 y R\+B10, bit\+\_\+map será igual a (1$<$$<$15)$\vert$(1$<$$<$10). \\
+\hline
+\end{DoxyParams}
+\index{pwm.\+c@{pwm.\+c}!desactivar\+P\+WM@{desactivar\+P\+WM}}
+\index{desactivar\+P\+WM@{desactivar\+P\+WM}!pwm.\+c@{pwm.\+c}}
+\paragraph[{\texorpdfstring{desactivar\+P\+W\+M(unsigned int bit\+\_\+map)}{desactivarPWM(unsigned int bit_map)}}]{\setlength{\rightskip}{0pt plus 5cm}void desactivar\+P\+WM (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{bit\+\_\+map}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm_8c_af59fba07bca44a73bf605f6cb5bda952}{}\label{pwm_8c_af59fba07bca44a73bf605f6cb5bda952}
+Desactiva las salidas P\+WM indicadas mediante el parámetro bit\+\_\+map. Nótese que la desactivación hace que la salida pase a estar controlada por el módulo de E/S digital, por lo que tomará el valor indicado por el bit correspondiente de P\+O\+R\+TB. 
+\begin{DoxyParams}{Parámetros}
+{\em bit\+\_\+map} & Indica qué pines se desactivan. Por ejemplo si se desean desactivar los pines R\+B15 y R\+B10, bit\+\_\+map será igual a (1$<$$<$15)$\vert$(1$<$$<$10). \\
+\hline
+\end{DoxyParams}
+\index{pwm.\+c@{pwm.\+c}!inicializar\+P\+WM@{inicializar\+P\+WM}}
+\index{inicializar\+P\+WM@{inicializar\+P\+WM}!pwm.\+c@{pwm.\+c}}
+\paragraph[{\texorpdfstring{inicializar\+P\+W\+M(unsigned int bit\+\_\+map, unsigned int frecuencia)}{inicializarPWM(unsigned int bit_map, unsigned int frecuencia)}}]{\setlength{\rightskip}{0pt plus 5cm}void inicializar\+P\+WM (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{bit\+\_\+map, }
+\item[{unsigned int}]{frecuencia}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm_8c_aa46cff0fd08be05cfe4d15c2b3d828d9}{}\label{pwm_8c_aa46cff0fd08be05cfe4d15c2b3d828d9}
+Incializa el módulo P\+WM. La función configura los pines indicados mediante el parámetro bit\+\_\+map como salidas del módulo P\+WM. Dichas salidas se configuran de modo independiente. Además el módulo configura el módulo P\+WM en el modo free running a la frecuencia indicada mediante el parámetro frecuencia.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em bit\+\_\+map} & Indica qué pines se conectan a las salidas del módulo P\+WM (1) o se dejan como E/S digital (0). Por ejemplo si se desea usar el pin R\+B15 y el R\+B10 como salidas P\+WM, bit\+\_\+map será igual a (1$<$$<$15)$\vert$(1$<$$<$10). \\
+\hline
+{\em frecuencia} & Frecuencia en Hz de la señal P\+WM. \\
+\hline
+\end{DoxyParams}
+\index{pwm.\+c@{pwm.\+c}!set\+Dc\+P\+WM@{set\+Dc\+P\+WM}}
+\index{set\+Dc\+P\+WM@{set\+Dc\+P\+WM}!pwm.\+c@{pwm.\+c}}
+\paragraph[{\texorpdfstring{set\+Dc\+P\+W\+M(unsigned int bit\+\_\+map, unsigned int dc)}{setDcPWM(unsigned int bit_map, unsigned int dc)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Dc\+P\+WM (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{bit\+\_\+map, }
+\item[{unsigned int}]{dc}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm_8c_a3ddad0465dbdbfad996a6fe4fac04975}{}\label{pwm_8c_a3ddad0465dbdbfad996a6fe4fac04975}
+Define el factor de servicio de la señal P\+WM de una o varias salidas, las cuales se definen mediante el parámetro bit\+\_\+map. Nótese que las salidas R\+B15-\/ R\+B14, R\+B13-\/\+R\+B12 y R\+B11-\/\+R\+B10 comparten el mismo canal P\+WM, por lo que su factor de servicio no puede ser distinto.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em bit\+\_\+map} & Indica qué pines se conectan a las salidas del módulo P\+WM (1) o se dejan como E/S digital (0). Por ejemplo si se desea usar el pin R\+B15 y el R\+B10 como salidas P\+WM, bit\+\_\+map será igual a (1$<$$<$15)$\vert$(1$<$$<$10). \\
+\hline
+{\em dc} & Factor de servicio en tanto por 10000. Por ejemplo si se desea un factor de servicio del 50\%, el parámetro dc ha de valer 5000. \\
+\hline
+\end{DoxyParams}
+\newpage
+\index{pwm.\+c@{pwm.\+c}!set\+Frecuencia@{set\+Frecuencia}}
+\index{set\+Frecuencia@{set\+Frecuencia}!pwm.\+c@{pwm.\+c}}
+\paragraph[{\texorpdfstring{set\+Frecuencia(unsigned int frecuencia)}{setFrecuencia(unsigned int frecuencia)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Frecuencia (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{frecuencia}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm_8c_ac1b5063b5ef6a2406929e8667b941742}{}\label{pwm_8c_ac1b5063b5ef6a2406929e8667b941742}
+Define la frecuencia del módulo P\+WM. Nótese que la frecuencia es común para las seis salidas del módulo P\+WM
+
+
+\begin{DoxyParams}{Parámetros}
+{\em frecuencia} & Frecuencia en Hz de la señal P\+WM. \\
+\hline
+\end{DoxyParams}
