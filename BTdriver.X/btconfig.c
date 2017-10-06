@@ -15,12 +15,8 @@
 
 //maximum name length
 #define NAME_LENGTH 20
-/// UART interrupts priority
-#define PR_INT_TX 5  // transmission
-#define PR_INT_RX 6  // reception
-//UART queues length
-#define TAM_TR_UART  250  // Cola de transmisión
-#define TAM_REC_UART 250  // Cola de recepción
+//HC06 default baudrate
+#define DEF_BAUD 9600
 
 //--------------------------------------------------------------------------------
 //-------MODULE GLOBAL VARIABLES (baud rate, name and pin for checking purposes)--
@@ -43,7 +39,7 @@ void initializeBT(void)
     
     char test[5] = "AT\0";
     //initialize UART2
-    inicializarUART2(9600);
+    inicializarUART2(DEF_BAUD);
     //send connection test
     putsUART2(test);
     
@@ -79,6 +75,18 @@ void setBTbaudrate(unsigned long baudrate)
     }else{
         baud_code = 12;
     }
+    //inicializarUART2(baudrate);
+    IEC1bits.U2TXIE    = 0;   // Disable transmission interruptions
+    IEC1bits.U2RXIE    = 0;   // Disable reception interruptions
+    U2MODEbits.UARTEN  = 0;   // Disable UART module 
+    U2STAbits.UTXEN    = 0;   // Disable transmission (only if UARTEN = 1)
+    U2BRG = (FCY/baudrate)/16 - 1;  // transmission speed 
+    IEC1bits.U2TXIE    = 0;   // Disable transmission interruptions
+    IEC1bits.U2RXIE    = 1;   // Enable reception interruptions
+    U2MODEbits.UARTEN  = 1;   // Enable UART module 
+    U2STAbits.UTXEN    = 1;   // Enable transmission (only if UARTEN = 1)
+    
+    //send baudrate AT command to bluetooth module
     sprintf(baud_message,"AT+BAUD%X \0",baud_code);
     putsUART2(baud_message);
 }

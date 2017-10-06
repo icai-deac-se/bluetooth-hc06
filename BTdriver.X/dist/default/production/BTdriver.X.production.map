@@ -106,12 +106,12 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0xa98           0xfe4  (4068)
 .const                       0xc98                0x1a            0x27  (39)
-.text                        0xcb2               0x884           0xcc6  (3270)
-.dinit                      0x1536                0x50            0x78  (120)
-.text                       0x1586                0x50            0x78  (120)
-.shared.dinit               0x15d6                 0x2             0x3  (3)
+.text                        0xcb2               0x8be           0xd1d  (3357)
+.dinit                      0x1570                0x50            0x78  (120)
+.text                       0x15c0                0x98            0xe4  (228)
+.shared.dinit               0x1658                 0x2             0x3  (3)
 
-                 Total program memory used (bytes):         0x1dc4  (7620) 5%
+                 Total program memory used (bytes):         0x1e87  (7815) 5%
 
 
 Ivt Memory  [Origin = 0x4, Length = 0xfc]
@@ -149,8 +149,8 @@ External Symbols in Program Memory (by address):
 
                   0x000200                  __resetPRI
                   0x00022c                  __psv_init
-                  0x00023c                  __data_init
                   0x00023c                  __data_init_standard
+                  0x00023c                  __data_init
                   0x0002ac                  __DefaultInterrupt
                   0x0002b0                  ___divsi3
                   0x0002ce                  ___udivsi3
@@ -174,34 +174,34 @@ External Symbols in Program Memory (by address):
                   0x000da6                  _setDcPWM
                   0x000e0a                  _activarPWM
                   0x000e74                  _desactivarPWM
-                  0x000ee2                  _inicializarUART
-                  0x000f84                  _procesarUART
-                  0x000f96                  _putsUART
-                  0x000fb2                  _getcharUART
-                  0x000fe0                  __U1TXInterrupt
-                  0x001010                  __U1RXInterrupt
-                  0x00105c                  _ponerEnColaTransmisionUART
-                  0x00109e                  _transmitirUART
-                  0x0010a8                  _inicializarUART2
-                  0x00113a                  _procesarUART2
-                  0x00114c                  _putsUART2
-                  0x001168                  _getcharUART2
-                  0x001196                  __U2TXInterrupt
-                  0x0011c6                  __U2RXInterrupt
-                  0x001212                  _ponerEnColaTransmisionUART2
-                  0x001254                  _transmitirUART2
-                  0x00125e                  _initializeBT
-                  0x00127c                  _setBTbaudrate
-                  0x001376                  _setBTname
-                  0x0013c4                  _setBTpin
-                  0x0013de                  _sendBT
-                  0x0013ee                  _getcharBT
-                  0x0013fa                  _inicializarTareaIdle
-                  0x0014d0                  _tareaIdle
-                  0x0014e2                  _inicializarReloj
-                  0x001586                  _inicializarADCPolling
-                  0x0015b2                  _leerADCPolling
-                  0x0015d0                  _main
+                  0x000ee2                  _inicializarUART2
+                  0x000f86                  _procesarUART2
+                  0x000f98                  _putsUART2
+                  0x000fb4                  _getcharUART2
+                  0x000fe2                  __U2TXInterrupt
+                  0x001012                  __U2RXInterrupt
+                  0x00105e                  _ponerEnColaTransmisionUART2
+                  0x0010a0                  _transmitirUART2
+                  0x0010aa                  _inicializarUART
+                  0x00114c                  _procesarUART
+                  0x00115e                  _putsUART
+                  0x00117a                  _getcharUART
+                  0x0011a8                  __U1TXInterrupt
+                  0x0011d8                  __U1RXInterrupt
+                  0x001224                  _ponerEnColaTransmisionUART
+                  0x001266                  _transmitirUART
+                  0x001270                  _initializeBT
+                  0x00128e                  _setBTbaudrate
+                  0x0013b0                  _setBTname
+                  0x0013fe                  _setBTpin
+                  0x001418                  _sendBT
+                  0x001428                  _getcharBT
+                  0x001434                  _inicializarTareaIdle
+                  0x00150a                  _tareaIdle
+                  0x00151c                  _inicializarReloj
+                  0x0015c0                  _main
+                  0x00160e                  _inicializarADCPolling
+                  0x00163a                  _leerADCPolling
                   0xf80000                  __FBS.sec
                   0xf80004                  __FGS.sec
 
@@ -212,10 +212,10 @@ External Symbols in Program Memory (by name):
                   0xf80004                  __FGS.sec
                   0x0006b4                  __Litob
                   0x000912                  __Puttxt
-                  0x001010                  __U1RXInterrupt
-                  0x000fe0                  __U1TXInterrupt
-                  0x0011c6                  __U2RXInterrupt
-                  0x001196                  __U2TXInterrupt
+                  0x0011d8                  __U1RXInterrupt
+                  0x0011a8                  __U1TXInterrupt
+                  0x001012                  __U2RXInterrupt
+                  0x000fe2                  __U2TXInterrupt
                   0x000a8a                  __Vacopy
                   0x00031a                  ___Printf_cdnopuxX
                   0x00047e                  ___Putfld_cdnopuxX
@@ -234,35 +234,35 @@ External Symbols in Program Memory (by name):
                   0x0002fc                  __sprintf_cdnopuxX
                   0x000e0a                  _activarPWM
                   0x000e74                  _desactivarPWM
-                  0x0013ee                  _getcharBT
-                  0x000fb2                  _getcharUART
-                  0x001168                  _getcharUART2
-                  0x001586                  _inicializarADCPolling
+                  0x001428                  _getcharBT
+                  0x00117a                  _getcharUART
+                  0x000fb4                  _getcharUART2
+                  0x00160e                  _inicializarADCPolling
                   0x000cb2                  _inicializarPWM
-                  0x0014e2                  _inicializarReloj
-                  0x0013fa                  _inicializarTareaIdle
-                  0x000ee2                  _inicializarUART
-                  0x0010a8                  _inicializarUART2
-                  0x00125e                  _initializeBT
-                  0x0015b2                  _leerADCPolling
-                  0x0015d0                  _main
+                  0x00151c                  _inicializarReloj
+                  0x001434                  _inicializarTareaIdle
+                  0x0010aa                  _inicializarUART
+                  0x000ee2                  _inicializarUART2
+                  0x001270                  _initializeBT
+                  0x00163a                  _leerADCPolling
+                  0x0015c0                  _main
                   0x00068e                  _memcpy
-                  0x00105c                  _ponerEnColaTransmisionUART
-                  0x001212                  _ponerEnColaTransmisionUART2
-                  0x000f84                  _procesarUART
-                  0x00113a                  _procesarUART2
-                  0x000f96                  _putsUART
-                  0x00114c                  _putsUART2
-                  0x0013de                  _sendBT
-                  0x00127c                  _setBTbaudrate
-                  0x001376                  _setBTname
-                  0x0013c4                  _setBTpin
+                  0x001224                  _ponerEnColaTransmisionUART
+                  0x00105e                  _ponerEnColaTransmisionUART2
+                  0x00114c                  _procesarUART
+                  0x000f86                  _procesarUART2
+                  0x00115e                  _putsUART
+                  0x000f98                  _putsUART2
+                  0x001418                  _sendBT
+                  0x00128e                  _setBTbaudrate
+                  0x0013b0                  _setBTname
+                  0x0013fe                  _setBTpin
                   0x000da6                  _setDcPWM
                   0x000d2a                  _setFrecuencia
                   0x00069c                  _strchr
-                  0x0014d0                  _tareaIdle
-                  0x00109e                  _transmitirUART
-                  0x001254                  _transmitirUART2
+                  0x00150a                  _tareaIdle
+                  0x001266                  _transmitirUART
+                  0x0010a0                  _transmitirUART2
                   0x0002ee                  sprintf_cdnopuxX.XXeo:_prout
 
 Memory Configuration
@@ -441,7 +441,7 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x3790
+.debug_info       0x000000       0x3d51
  *(.debug_info)
  .debug_info      0x000000        0x553 build/default/production/DriverPicTrainer/adc.o
  .debug_info      0x000553        0x4bd build/default/production/DriverPicTrainer/config.o
@@ -449,11 +449,11 @@ __FUID3
  .debug_info      0x000d0d        0x6f2 build/default/production/DriverPicTrainer/pwm.o
  .debug_info      0x0013ff       0x1063 build/default/production/DriverPicTrainer/uart.o
  .debug_info      0x002462        0xf77 build/default/production/DriverPicTrainer/uart2.o
- .debug_info      0x0033d9        0x2f9 build/default/production/btconfig.o
- .debug_info      0x0036d2         0xbe build/default/production/main.o
+ .debug_info      0x0033d9        0x860 build/default/production/btconfig.o
+ .debug_info      0x003c39        0x118 build/default/production/main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x642
+.debug_abbrev     0x000000        0x6eb
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0xe2 build/default/production/DriverPicTrainer/adc.o
  .debug_abbrev    0x0000e2         0xb8 build/default/production/DriverPicTrainer/config.o
@@ -461,19 +461,19 @@ __FUID3
  .debug_abbrev    0x00025d         0xe7 build/default/production/DriverPicTrainer/pwm.o
  .debug_abbrev    0x000344        0x121 build/default/production/DriverPicTrainer/uart.o
  .debug_abbrev    0x000465        0x121 build/default/production/DriverPicTrainer/uart2.o
- .debug_abbrev    0x000586         0x86 build/default/production/btconfig.o
- .debug_abbrev    0x00060c         0x36 build/default/production/main.o
+ .debug_abbrev    0x000586        0x10c build/default/production/btconfig.o
+ .debug_abbrev    0x000692         0x59 build/default/production/main.o
 
-.debug_line       0x000000        0x5b0
+.debug_line       0x000000        0x62c
  *(.debug_line)
  .debug_line      0x000000         0xb1 build/default/production/DriverPicTrainer/adc.o
  .debug_line      0x0000b1         0xb0 build/default/production/DriverPicTrainer/config.o
  .debug_line      0x000161         0xc0 build/default/production/DriverPicTrainer/idle.o
  .debug_line      0x000221         0xf1 build/default/production/DriverPicTrainer/pwm.o
  .debug_line      0x000312         0xfd build/default/production/DriverPicTrainer/uart.o
- .debug_line      0x00040f         0xfd build/default/production/DriverPicTrainer/uart2.o
- .debug_line      0x00050c         0x6f build/default/production/btconfig.o
- .debug_line      0x00057b         0x35 build/default/production/main.o
+ .debug_line      0x00040f         0xfe build/default/production/DriverPicTrainer/uart2.o
+ .debug_line      0x00050d         0xd9 build/default/production/btconfig.o
+ .debug_line      0x0005e6         0x46 build/default/production/main.o
 
 .debug_frame      0x000000        0x48c
  *(.debug_frame)
@@ -486,7 +486,7 @@ __FUID3
  .debug_frame     0x000384         0xd8 build/default/production/btconfig.o
  .debug_frame     0x00045c         0x30 build/default/production/main.o
 
-.debug_str        0x000000        0x11b
+.debug_str        0x000000        0x139
  *(.debug_str)
  .debug_str       0x000000         0x27 build/default/production/DriverPicTrainer/adc.o
  .debug_str       0x000027         0x16 build/default/production/DriverPicTrainer/config.o
@@ -494,6 +494,7 @@ __FUID3
  .debug_str       0x000046         0x40 build/default/production/DriverPicTrainer/pwm.o
  .debug_str       0x000086         0x4f build/default/production/DriverPicTrainer/uart.o
  .debug_str       0x0000d5         0x46 build/default/production/DriverPicTrainer/uart2.o
+ .debug_str       0x00011b         0x1e build/default/production/btconfig.o
 
 .debug_loc
  *(.debug_loc)
@@ -1636,7 +1637,7 @@ LOAD data_init
 LOAD shared_data_init
 
 .debug_pubtypes
-                  0x0000c0        0x367
+                  0x0000c0        0x3c4
  .debug_pubtypes
                   0x0000c0         0x52 build/default/production/DriverPicTrainer/adc.o
  .debug_pubtypes
@@ -1650,56 +1651,56 @@ LOAD shared_data_init
  .debug_pubtypes
                   0x000318         0xeb build/default/production/DriverPicTrainer/uart2.o
  .debug_pubtypes
-                  0x000403         0x12 build/default/production/btconfig.o
+                  0x000403         0x6f build/default/production/btconfig.o
  .debug_pubtypes
-                  0x000415         0x12 build/default/production/main.o
+                  0x000472         0x12 build/default/production/main.o
 
 __c30_signature
-                  0x000427         0x84
+                  0x000484         0x84
  __c30_signature
-                  0x000427          0x6 build/default/production/DriverPicTrainer/adc.o
+                  0x000484          0x6 build/default/production/DriverPicTrainer/adc.o
  __c30_signature
-                  0x00042d          0x6 build/default/production/DriverPicTrainer/config.o
+                  0x00048a          0x6 build/default/production/DriverPicTrainer/config.o
  __c30_signature
-                  0x000433          0x6 build/default/production/DriverPicTrainer/idle.o
+                  0x000490          0x6 build/default/production/DriverPicTrainer/idle.o
  __c30_signature
-                  0x000439          0x6 build/default/production/DriverPicTrainer/pwm.o
+                  0x000496          0x6 build/default/production/DriverPicTrainer/pwm.o
  __c30_signature
-                  0x00043f          0x6 build/default/production/DriverPicTrainer/uart.o
+                  0x00049c          0x6 build/default/production/DriverPicTrainer/uart.o
  __c30_signature
-                  0x000445          0x6 build/default/production/DriverPicTrainer/uart2.o
+                  0x0004a2          0x6 build/default/production/DriverPicTrainer/uart2.o
  __c30_signature
-                  0x00044b          0x6 build/default/production/btconfig.o
+                  0x0004a8          0x6 build/default/production/btconfig.o
  __c30_signature
-                  0x000451          0x6 build/default/production/main.o
+                  0x0004ae          0x6 build/default/production/main.o
  __c30_signature
-                  0x000457          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
+                  0x0004b4          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x00045d          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+                  0x0004ba          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
  __c30_signature
-                  0x000463          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(divsi3.eo)
+                  0x0004c0          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(divsi3.eo)
  __c30_signature
-                  0x000469          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+                  0x0004c6          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
  __c30_signature
-                  0x00046f          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
+                  0x0004cc          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
  __c30_signature
-                  0x000475          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
+                  0x0004d2          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
  __c30_signature
-                  0x00047b          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo)
+                  0x0004d8          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo)
  __c30_signature
-                  0x000481          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(memcpy.XXeo)
+                  0x0004de          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(memcpy.XXeo)
  __c30_signature
-                  0x000487          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(strchr.XXeo)
+                  0x0004e4          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(strchr.XXeo)
  __c30_signature
-                  0x00048d          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(xlitob.XXeo)
+                  0x0004ea          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(xlitob.XXeo)
  __c30_signature
-                  0x000493          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(xputtxt.XXeo)
+                  0x0004f0          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(xputtxt.XXeo)
  __c30_signature
-                  0x000499          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(xvacopy.XXeo)
+                  0x0004f6          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\liblega-c-elf.a(xvacopy.XXeo)
  __c30_signature
-                  0x00049f          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(umodsi3.eo)
+                  0x0004fc          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(umodsi3.eo)
  __c30_signature
-                  0x0004a5          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000502          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
 
 .nbss               0x0800         0x10
  .nbss              0x0800          0x8 build/default/production/DriverPicTrainer/uart.o
@@ -1754,53 +1755,53 @@ __c30_signature
 .const              0x8c98         0x1a load address 0x000c98  
  .const             0x8c98         0x1a build/default/production/btconfig.o
 
-.text             0x000cb2        0x884
+.text             0x000cb2        0x8be
  .text            0x000cb2        0x230 build/default/production/DriverPicTrainer/pwm.o
                   0x000cb2                  _inicializarPWM
                   0x000d2a                  _setFrecuencia
                   0x000da6                  _setDcPWM
                   0x000e0a                  _activarPWM
                   0x000e74                  _desactivarPWM
- .text            0x000ee2        0x1c6 build/default/production/DriverPicTrainer/uart.o
-                  0x000ee2                  _inicializarUART
-                  0x000f84                  _procesarUART
-                  0x000f96                  _putsUART
-                  0x000fb2                  _getcharUART
-                  0x000fe0                  __U1TXInterrupt
-                  0x001010                  __U1RXInterrupt
-                  0x00105c                  _ponerEnColaTransmisionUART
-                  0x00109e                  _transmitirUART
- .text            0x0010a8        0x1b6 build/default/production/DriverPicTrainer/uart2.o
-                  0x0010a8                  _inicializarUART2
-                  0x00113a                  _procesarUART2
-                  0x00114c                  _putsUART2
-                  0x001168                  _getcharUART2
-                  0x001196                  __U2TXInterrupt
-                  0x0011c6                  __U2RXInterrupt
-                  0x001212                  _ponerEnColaTransmisionUART2
-                  0x001254                  _transmitirUART2
- .text            0x00125e        0x19c build/default/production/btconfig.o
-                  0x00125e                  _initializeBT
-                  0x00127c                  _setBTbaudrate
-                  0x001376                  _setBTname
-                  0x0013c4                  _setBTpin
-                  0x0013de                  _sendBT
-                  0x0013ee                  _getcharBT
- .text            0x0013fa         0xe8 build/default/production/DriverPicTrainer/idle.o
-                  0x0013fa                  _inicializarTareaIdle
-                  0x0014d0                  _tareaIdle
- .text            0x0014e2         0x54 build/default/production/DriverPicTrainer/config.o
-                  0x0014e2                  _inicializarReloj
+ .text            0x000ee2        0x1c8 build/default/production/DriverPicTrainer/uart2.o
+                  0x000ee2                  _inicializarUART2
+                  0x000f86                  _procesarUART2
+                  0x000f98                  _putsUART2
+                  0x000fb4                  _getcharUART2
+                  0x000fe2                  __U2TXInterrupt
+                  0x001012                  __U2RXInterrupt
+                  0x00105e                  _ponerEnColaTransmisionUART2
+                  0x0010a0                  _transmitirUART2
+ .text            0x0010aa        0x1c6 build/default/production/DriverPicTrainer/uart.o
+                  0x0010aa                  _inicializarUART
+                  0x00114c                  _procesarUART
+                  0x00115e                  _putsUART
+                  0x00117a                  _getcharUART
+                  0x0011a8                  __U1TXInterrupt
+                  0x0011d8                  __U1RXInterrupt
+                  0x001224                  _ponerEnColaTransmisionUART
+                  0x001266                  _transmitirUART
+ .text            0x001270        0x1c4 build/default/production/btconfig.o
+                  0x001270                  _initializeBT
+                  0x00128e                  _setBTbaudrate
+                  0x0013b0                  _setBTname
+                  0x0013fe                  _setBTpin
+                  0x001418                  _sendBT
+                  0x001428                  _getcharBT
+ .text            0x001434         0xe8 build/default/production/DriverPicTrainer/idle.o
+                  0x001434                  _inicializarTareaIdle
+                  0x00150a                  _tareaIdle
+ .text            0x00151c         0x54 build/default/production/DriverPicTrainer/config.o
+                  0x00151c                  _inicializarReloj
 
-.dinit            0x001536         0x50
- .dinit           0x001536         0x50 data_init
+.dinit            0x001570         0x50
+ .dinit           0x001570         0x50 data_init
 
-.text             0x001586         0x50
- .text            0x001586         0x4a build/default/production/DriverPicTrainer/adc.o
-                  0x001586                  _inicializarADCPolling
-                  0x0015b2                  _leerADCPolling
- .text            0x0015d0          0x6 build/default/production/main.o
-                  0x0015d0                  _main
+.text             0x0015c0         0x98
+ .text            0x0015c0         0x4e build/default/production/main.o
+                  0x0015c0                  _main
+ .text            0x00160e         0x4a build/default/production/DriverPicTrainer/adc.o
+                  0x00160e                  _inicializarADCPolling
+                  0x00163a                  _leerADCPolling
 
-.shared.dinit     0x0015d6          0x2
- .shared.dinit    0x0015d6          0x2 shared_data_init
+.shared.dinit     0x001658          0x2
+ .shared.dinit    0x001658          0x2 shared_data_init

@@ -17,7 +17,7 @@
 // -----------------------------------------------------------------------------
 
 #include <xc.h>
-#include "uart.h"
+//#include "uart.h"
 #include "config.h" // Se define aquí FCY, necesario para configurar el baudrate
 #include "uart2.h"
 
@@ -59,7 +59,7 @@ void transmitirUART2(void);
 
 void inicializarUART2(unsigned long baudrate)
 {
-    U2BRG = (FCY/9600)/16 - 1;  // transmission speed 
+    U2BRG = (FCY/baudrate)/16 - 1;  // transmission speed 
 
     U2MODEbits.STSEL   = 0;   // Stop bits: 1
     U2MODEbits.PDSEL   = 0;   // Data bits: 8, Parity: none
