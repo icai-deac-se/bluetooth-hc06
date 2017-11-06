@@ -75,6 +75,11 @@ void setBTbaudrate(unsigned long baudrate)
     }else{
         baud_code = 12;
     }
+    
+    //send baudrate AT command to bluetooth module
+    sprintf(baud_message,"AT+BAUD%X \0",baud_code);
+    putsUART2(baud_message);
+    
     //inicializarUART2(baudrate);
     IEC1bits.U2TXIE    = 0;   // Disable transmission interruptions
     IEC1bits.U2RXIE    = 0;   // Disable reception interruptions
@@ -86,9 +91,6 @@ void setBTbaudrate(unsigned long baudrate)
     U2MODEbits.UARTEN  = 1;   // Enable UART module 
     U2STAbits.UTXEN    = 1;   // Enable transmission (only if UARTEN = 1)
     
-    //send baudrate AT command to bluetooth module
-    sprintf(baud_message,"AT+BAUD%X \0",baud_code);
-    putsUART2(baud_message);
 }
 
 void setBTname(char *pname){

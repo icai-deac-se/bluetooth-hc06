@@ -7,6 +7,8 @@
  * Created on 29th september 2017, 13:14
  */
 
+#include "DriverPicTrainer/uart2.h"
+
 #ifndef BTCONFIG_H
 #define	BTCONFIG_H
 
