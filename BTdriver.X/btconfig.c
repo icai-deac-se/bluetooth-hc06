@@ -5,6 +5,7 @@
  *              (name, pin & baud rate) & functions to control transmission
  *              and reception after the device is paired
  * Created on 29th September 2017, 13:14
+ * Version: 0.3 - 22/01/2018
  */
 
 #include <xc.h>
@@ -77,8 +78,10 @@ void setBTbaudrate(unsigned long baudrate)
     }
     
     //send baudrate AT command to bluetooth module
-    sprintf(baud_message,"AT+BAUD%X \0",baud_code);
+    sprintf(baud_message,"AT+BAUD%X",baud_code);
+    baud_message[8] = '\0';
     putsUART2(baud_message);
+ 
     
     //inicializarUART2(baudrate);
     IEC1bits.U2TXIE    = 0;   // Disable transmission interruptions
@@ -116,7 +119,7 @@ void sendBT(char *pmessage){
     char *pcad;
     
     pcad = pmessage;
-    putsUART2(&pcad);
+    putsUART2(pcad);
 }
 
 char getcharBT(void){

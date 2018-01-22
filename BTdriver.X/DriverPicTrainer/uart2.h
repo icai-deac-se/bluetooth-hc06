@@ -30,7 +30,7 @@
  * con un bit de stop. El módulo usa interrupciones tanto para la recepción como
  * para la transmisión. La comunicación con las rutinas de interrupción se
  * realiza mediante dos colas.
- *
+ * (RX is assigned to pin RB6 and TX to pin RB7)
  * @param baudrate Baudrate de la uart en baudios
  */
 void inicializarUART2(unsigned long baudrate);

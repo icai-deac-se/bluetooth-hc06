@@ -8,6 +8,7 @@
  */
 
 #include "DriverPicTrainer/uart2.h"
+#include "DriverPicTrainer/uart.h"
 
 #ifndef BTCONFIG_H
 #define	BTCONFIG_H

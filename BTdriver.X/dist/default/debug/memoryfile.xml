@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
-  <executable name="dist/default/production/BTdriver.X.production.elf">
+  <executable name="dist/default/debug/BTdriver.X.debug.elf">
     <memory name="data">
       <units>bytes</units>
       <length>16384</length>
-      <used>1108</used>
-      <free>15276</free>
+      <used>1188</used>
+      <free>15196</free>
     </memory>
     <memory name="program">
       <units>bytes</units>

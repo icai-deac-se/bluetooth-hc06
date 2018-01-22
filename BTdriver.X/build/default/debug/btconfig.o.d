@@ -1,4 +1,4 @@
-build/default/production/btconfig.o:  \
+build/default/debug/btconfig.o:  \
 btconfig.c  \
 config.h  \
 btconfig.h  \

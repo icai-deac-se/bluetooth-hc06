@@ -84,7 +84,7 @@ void inicializarUART2(unsigned long baudrate)
     U2MODEbits.UARTEN  = 1;   // Enable UART module 
     U2STAbits.UTXEN    = 1;   // Enable transmission (only if UARTEN = 1)
 
-    // Configure microcontroller pins: RB6 and RB7 are used for HC06 module
+    // Configure microcontroller pins: RB6 and RB7 are used for RX and TX
     __builtin_write_OSCCONL(OSCCON & 0xBF);  // Unlock PPS
     RPINR19bits.U2RXR = 6;  // Assign U2RX to pin 15 => RP6
     RPOR3bits.RP7R    = 5;  // Assign U2TX to pin 16 => RP7
@@ -169,9 +169,9 @@ void __attribute__((interrupt,no_auto_psv)) _U2RXInterrupt(void)
     if( (ui_icabeza_rec+1 == ui_icola_rec) ||
         (ui_icabeza_rec+1 == TAM_REC_UART && ui_icola_rec == 0) ){
         // Cola llena
-        PORTB &= ~(1<<12); // Enciende led RB12
+        PORTB &= ~(1<<13); // Enciende led RB13
     }else{
-        uc_cola_recepcion[ui_icabeza_rec] = U1RXREG;
+        uc_cola_recepcion[ui_icabeza_rec] = U2RXREG;
         ui_icabeza_rec++;
         if (ui_icabeza_rec == TAM_TR_UART){
             ui_icabeza_rec = 0;

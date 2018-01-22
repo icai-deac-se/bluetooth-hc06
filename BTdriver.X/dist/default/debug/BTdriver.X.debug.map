@@ -6,7 +6,7 @@ Tool Name:
 Command:
   -p33FJ128MC802 \
   -o \
-  dist/default/production/BTdriver.X.production.elf \
+  dist/default/debug/BTdriver.X.debug.elf \
   -Lc:/program files (x86)/microchip/xc16/v1.31/bin/bin/.. \
   -Lc:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib \
   -Lc:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../support/PIC24E/gld \
@@ -15,17 +15,25 @@ Command:
   -Lc:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../support/dsPIC30F/gld \
   -Lc:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../support/dsPIC33E/gld \
   -Lc:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../support/dsPIC33F/gld \
-  build/default/production/DriverPicTrainer/adc.o \
-  build/default/production/DriverPicTrainer/config.o \
-  build/default/production/DriverPicTrainer/idle.o \
-  build/default/production/DriverPicTrainer/pwm.o \
-  build/default/production/DriverPicTrainer/uart.o \
-  build/default/production/DriverPicTrainer/uart2.o \
-  build/default/production/btconfig.o \
-  build/default/production/main.o \
-  build/default/production/timers.o \
+  build/default/debug/DriverPicTrainer/adc.o \
+  build/default/debug/DriverPicTrainer/config.o \
+  build/default/debug/DriverPicTrainer/idle.o \
+  build/default/debug/DriverPicTrainer/pwm.o \
+  build/default/debug/DriverPicTrainer/uart.o \
+  build/default/debug/DriverPicTrainer/uart2.o \
+  build/default/debug/btconfig.o \
+  build/default/debug/main.o \
+  build/default/debug/timers.o \
+  -TC:\\Users\\201211~1\\AppData\\Local\\Temp\\tmp00002dc0.00 \
+  -TC:\\Users\\201211~1\\AppData\\Local\\Temp\\tmp00002dc0.01 \
+  -TC:\\Users\\201211~1\\AppData\\Local\\Temp\\tmp00002dc0.02 \
+  -TC:\\Users\\201211~1\\AppData\\Local\\Temp\\tmp00002dc0.03 \
+  -TC:\\Users\\201211~1\\AppData\\Local\\Temp\\tmp00002dc0.04 \
   --defsym=__MPLAB_BUILD=1 \
-  -Tp33FJ128MC802.gld.00 \
+  --defsym=__MPLAB_DEBUG=1 \
+  --defsym=__DEBUG=1 \
+  --defsym=__MPLAB_DEBUGGER_PK3=1 \
+  -Tp33FJ128MC802.gld.05 \
   --stack=16 \
   --check-sections \
   --data-init \
@@ -37,10 +45,10 @@ Command:
   --stackguard=16 \
   --no-force-link \
   --smart-io \
-  -Map=dist/default/production/BTdriver.X.production.map \
+  -Map=dist/default/debug/BTdriver.X.debug.map \
   --report-mem \
   --memorysummary \
-  dist/default/production/memoryfile.xml \
+  dist/default/debug/memoryfile.xml \
   -start-group \
   --library=lega-pic30-elf \
   --library=m-elf \
@@ -58,11 +66,11 @@ c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.
 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
                               (__crt_start_mode_normal)
 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(divsi3.eo)
-                              build/default/production/DriverPicTrainer/pwm.o (___divsi3)
+                              build/default/debug/DriverPicTrainer/pwm.o (___divsi3)
 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
-                              build/default/production/DriverPicTrainer/idle.o (___udivsi3)
+                              build/default/debug/DriverPicTrainer/idle.o (___udivsi3)
 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
-                              build/default/production/btconfig.o (__sprintf_cdnopuxX)
+                              build/default/debug/btconfig.o (__sprintf_cdnopuxX)
 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
                               c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo) (___Printf_cdnopuxX)
 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo)
@@ -132,11 +140,16 @@ Data Memory  [Origin = 0x800, Length = 0x4000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                        0x800                   0            0x30  (48)
-.bss                         0x830                   0           0x3e8  (1000)
-.data                        0xc18                   0            0x3c  (60)
+reserve_data_0x800           0x800                0x20            0x20  (32)
+reserve_data_0x820           0x820                 0x2             0x2  (2)
+reserve_data_0x822           0x822                 0x2             0x2  (2)
+reserve_data_0x824           0x824                 0x2             0x2  (2)
+reserve_data_0x826           0x826                0x2a            0x2a  (42)
+.nbss                        0x850                   0            0x30  (48)
+.bss                         0x880                   0           0x3e8  (1000)
+.data                        0xc68                   0            0x3c  (60)
 
-                 Total data memory used (bytes):          0x454  (1108) 6%
+                 Total data memory used (bytes):          0x4a4  (1188) 7%
 
 
 Dynamic Memory Usage
@@ -144,9 +157,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0xc54                              0x3bac  (15276)
+stack                        0xca4                              0x3b5c  (15196)
 
-                 Maximum dynamic memory (bytes):         0x3bac  (15276)
+                 Maximum dynamic memory (bytes):         0x3b5c  (15196)
 
 
 External Symbols in Program Memory (by address):
@@ -308,16 +321,44 @@ FUID3            0xf80016           0x000002
 
 Linker script and memory map
 
-LOAD build/default/production/DriverPicTrainer/adc.o
-LOAD build/default/production/DriverPicTrainer/config.o
-LOAD build/default/production/DriverPicTrainer/idle.o
-LOAD build/default/production/DriverPicTrainer/pwm.o
-LOAD build/default/production/DriverPicTrainer/uart.o
-LOAD build/default/production/DriverPicTrainer/uart2.o
-LOAD build/default/production/btconfig.o
-LOAD build/default/production/main.o
-LOAD build/default/production/timers.o
+LOAD build/default/debug/DriverPicTrainer/adc.o
+LOAD build/default/debug/DriverPicTrainer/config.o
+LOAD build/default/debug/DriverPicTrainer/idle.o
+LOAD build/default/debug/DriverPicTrainer/pwm.o
+LOAD build/default/debug/DriverPicTrainer/uart.o
+LOAD build/default/debug/DriverPicTrainer/uart2.o
+LOAD build/default/debug/btconfig.o
+LOAD build/default/debug/main.o
+LOAD build/default/debug/timers.o
+
+reserve_data_0x800
+                    0x0800         0x20
+                    0x0820                  . = 0x20
+ *fill*             0x0800         0x2000
+
+reserve_data_0x820
+                    0x0820          0x2
+                    0x0822                  . = 0x2
+ *fill*             0x0820          0x200
+
+reserve_data_0x822
+                    0x0822          0x2
+                    0x0824                  . = 0x2
+ *fill*             0x0822          0x200
+
+reserve_data_0x824
+                    0x0824          0x2
+                    0x0826                  . = 0x2
+ *fill*             0x0824          0x200
+
+reserve_data_0x826
+                    0x0826         0x2a
+                    0x0850                  . = 0x2a
+ *fill*             0x0826         0x2a00
                     0x0001                  __MPLAB_BUILD = 0x1
+                    0x0001                  __MPLAB_DEBUG = 0x1
+                    0x0001                  __DEBUG = 0x1
+                    0x0001                  __MPLAB_DEBUGGER_PK3 = 0x1
 LOAD p33FJ128MC802
 LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
                     0xf80000                  __FBS = 0xf80000
@@ -466,63 +507,63 @@ __FUID3
 
 .debug_info       0x000000       0x476a
  *(.debug_info)
- .debug_info      0x000000        0x53e build/default/production/DriverPicTrainer/adc.o
- .debug_info      0x00053e        0x4a8 build/default/production/DriverPicTrainer/config.o
- .debug_info      0x0009e6        0x2e8 build/default/production/DriverPicTrainer/idle.o
- .debug_info      0x000cce        0x6dd build/default/production/DriverPicTrainer/pwm.o
- .debug_info      0x0013ab       0x104e build/default/production/DriverPicTrainer/uart.o
- .debug_info      0x0023f9        0xf62 build/default/production/DriverPicTrainer/uart2.o
- .debug_info      0x00335b        0x84b build/default/production/btconfig.o
- .debug_info      0x003ba6        0x230 build/default/production/main.o
- .debug_info      0x003dd6        0x994 build/default/production/timers.o
+ .debug_info      0x000000        0x53e build/default/debug/DriverPicTrainer/adc.o
+ .debug_info      0x00053e        0x4a8 build/default/debug/DriverPicTrainer/config.o
+ .debug_info      0x0009e6        0x2e8 build/default/debug/DriverPicTrainer/idle.o
+ .debug_info      0x000cce        0x6dd build/default/debug/DriverPicTrainer/pwm.o
+ .debug_info      0x0013ab       0x104e build/default/debug/DriverPicTrainer/uart.o
+ .debug_info      0x0023f9        0xf62 build/default/debug/DriverPicTrainer/uart2.o
+ .debug_info      0x00335b        0x84b build/default/debug/btconfig.o
+ .debug_info      0x003ba6        0x230 build/default/debug/main.o
+ .debug_info      0x003dd6        0x994 build/default/debug/timers.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x838
  *(.debug_abbrev)
- .debug_abbrev    0x000000         0xe2 build/default/production/DriverPicTrainer/adc.o
- .debug_abbrev    0x0000e2         0xb8 build/default/production/DriverPicTrainer/config.o
- .debug_abbrev    0x00019a         0xc3 build/default/production/DriverPicTrainer/idle.o
- .debug_abbrev    0x00025d         0xe7 build/default/production/DriverPicTrainer/pwm.o
- .debug_abbrev    0x000344        0x121 build/default/production/DriverPicTrainer/uart.o
- .debug_abbrev    0x000465        0x121 build/default/production/DriverPicTrainer/uart2.o
- .debug_abbrev    0x000586        0x10c build/default/production/btconfig.o
- .debug_abbrev    0x000692         0x7e build/default/production/main.o
- .debug_abbrev    0x000710        0x128 build/default/production/timers.o
+ .debug_abbrev    0x000000         0xe2 build/default/debug/DriverPicTrainer/adc.o
+ .debug_abbrev    0x0000e2         0xb8 build/default/debug/DriverPicTrainer/config.o
+ .debug_abbrev    0x00019a         0xc3 build/default/debug/DriverPicTrainer/idle.o
+ .debug_abbrev    0x00025d         0xe7 build/default/debug/DriverPicTrainer/pwm.o
+ .debug_abbrev    0x000344        0x121 build/default/debug/DriverPicTrainer/uart.o
+ .debug_abbrev    0x000465        0x121 build/default/debug/DriverPicTrainer/uart2.o
+ .debug_abbrev    0x000586        0x10c build/default/debug/btconfig.o
+ .debug_abbrev    0x000692         0x7e build/default/debug/main.o
+ .debug_abbrev    0x000710        0x128 build/default/debug/timers.o
 
 .debug_line       0x000000        0x828
  *(.debug_line)
- .debug_line      0x000000         0xb1 build/default/production/DriverPicTrainer/adc.o
- .debug_line      0x0000b1         0xb0 build/default/production/DriverPicTrainer/config.o
- .debug_line      0x000161         0xc0 build/default/production/DriverPicTrainer/idle.o
- .debug_line      0x000221         0xf1 build/default/production/DriverPicTrainer/pwm.o
- .debug_line      0x000312         0xfd build/default/production/DriverPicTrainer/uart.o
- .debug_line      0x00040f         0xfe build/default/production/DriverPicTrainer/uart2.o
- .debug_line      0x00050d         0xda build/default/production/btconfig.o
- .debug_line      0x0005e7        0x10d build/default/production/main.o
- .debug_line      0x0006f4        0x134 build/default/production/timers.o
+ .debug_line      0x000000         0xb1 build/default/debug/DriverPicTrainer/adc.o
+ .debug_line      0x0000b1         0xb0 build/default/debug/DriverPicTrainer/config.o
+ .debug_line      0x000161         0xc0 build/default/debug/DriverPicTrainer/idle.o
+ .debug_line      0x000221         0xf1 build/default/debug/DriverPicTrainer/pwm.o
+ .debug_line      0x000312         0xfd build/default/debug/DriverPicTrainer/uart.o
+ .debug_line      0x00040f         0xfe build/default/debug/DriverPicTrainer/uart2.o
+ .debug_line      0x00050d         0xda build/default/debug/btconfig.o
+ .debug_line      0x0005e7        0x10d build/default/debug/main.o
+ .debug_line      0x0006f4        0x134 build/default/debug/timers.o
 
 .debug_frame      0x000000        0x574
  *(.debug_frame)
- .debug_frame     0x000000         0x4c build/default/production/DriverPicTrainer/adc.o
- .debug_frame     0x00004c         0x30 build/default/production/DriverPicTrainer/config.o
- .debug_frame     0x00007c         0x4c build/default/production/DriverPicTrainer/idle.o
- .debug_frame     0x0000c8         0xa0 build/default/production/DriverPicTrainer/pwm.o
- .debug_frame     0x000168        0x10e build/default/production/DriverPicTrainer/uart.o
- .debug_frame     0x000276        0x10e build/default/production/DriverPicTrainer/uart2.o
- .debug_frame     0x000384         0xd8 build/default/production/btconfig.o
- .debug_frame     0x00045c         0x30 build/default/production/main.o
- .debug_frame     0x00048c         0xe8 build/default/production/timers.o
+ .debug_frame     0x000000         0x4c build/default/debug/DriverPicTrainer/adc.o
+ .debug_frame     0x00004c         0x30 build/default/debug/DriverPicTrainer/config.o
+ .debug_frame     0x00007c         0x4c build/default/debug/DriverPicTrainer/idle.o
+ .debug_frame     0x0000c8         0xa0 build/default/debug/DriverPicTrainer/pwm.o
+ .debug_frame     0x000168        0x10e build/default/debug/DriverPicTrainer/uart.o
+ .debug_frame     0x000276        0x10e build/default/debug/DriverPicTrainer/uart2.o
+ .debug_frame     0x000384         0xd8 build/default/debug/btconfig.o
+ .debug_frame     0x00045c         0x30 build/default/debug/main.o
+ .debug_frame     0x00048c         0xe8 build/default/debug/timers.o
 
 .debug_str        0x000000        0x181
  *(.debug_str)
- .debug_str       0x000000         0x27 build/default/production/DriverPicTrainer/adc.o
- .debug_str       0x000027         0x16 build/default/production/DriverPicTrainer/config.o
- .debug_str       0x00003d          0x9 build/default/production/DriverPicTrainer/idle.o
- .debug_str       0x000046         0x40 build/default/production/DriverPicTrainer/pwm.o
- .debug_str       0x000086         0x4f build/default/production/DriverPicTrainer/uart.o
- .debug_str       0x0000d5         0x46 build/default/production/DriverPicTrainer/uart2.o
- .debug_str       0x00011b         0x1e build/default/production/btconfig.o
- .debug_str       0x000139         0x48 build/default/production/timers.o
+ .debug_str       0x000000         0x27 build/default/debug/DriverPicTrainer/adc.o
+ .debug_str       0x000027         0x16 build/default/debug/DriverPicTrainer/config.o
+ .debug_str       0x00003d          0x9 build/default/debug/DriverPicTrainer/idle.o
+ .debug_str       0x000046         0x40 build/default/debug/DriverPicTrainer/pwm.o
+ .debug_str       0x000086         0x4f build/default/debug/DriverPicTrainer/uart.o
+ .debug_str       0x0000d5         0x46 build/default/debug/DriverPicTrainer/uart2.o
+ .debug_str       0x00011b         0x1e build/default/debug/btconfig.o
+ .debug_str       0x000139         0x48 build/default/debug/timers.o
 
 .debug_loc
  *(.debug_loc)
@@ -534,23 +575,23 @@ __FUID3
                   0x000000        0x35c
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x3f build/default/production/DriverPicTrainer/adc.o
+                  0x000000         0x3f build/default/debug/DriverPicTrainer/adc.o
  .debug_pubnames
-                  0x00003f         0x27 build/default/production/DriverPicTrainer/config.o
+                  0x00003f         0x27 build/default/debug/DriverPicTrainer/config.o
  .debug_pubnames
-                  0x000066         0x39 build/default/production/DriverPicTrainer/idle.o
+                  0x000066         0x39 build/default/debug/DriverPicTrainer/idle.o
  .debug_pubnames
-                  0x00009f         0x65 build/default/production/DriverPicTrainer/pwm.o
+                  0x00009f         0x65 build/default/debug/DriverPicTrainer/pwm.o
  .debug_pubnames
-                  0x000104         0xac build/default/production/DriverPicTrainer/uart.o
+                  0x000104         0xac build/default/debug/DriverPicTrainer/uart.o
  .debug_pubnames
-                  0x0001b0         0xb2 build/default/production/DriverPicTrainer/uart2.o
+                  0x0001b0         0xb2 build/default/debug/DriverPicTrainer/uart2.o
  .debug_pubnames
-                  0x000262         0x69 build/default/production/btconfig.o
+                  0x000262         0x69 build/default/debug/btconfig.o
  .debug_pubnames
-                  0x0002cb         0x1b build/default/production/main.o
+                  0x0002cb         0x1b build/default/debug/main.o
  .debug_pubnames
-                  0x0002e6         0x76 build/default/production/timers.o
+                  0x0002e6         0x76 build/default/debug/timers.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -558,23 +599,23 @@ __FUID3
 .debug_aranges    0x000000         0xd8
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/default/production/DriverPicTrainer/adc.o
+                  0x000000         0x18 build/default/debug/DriverPicTrainer/adc.o
  .debug_aranges
-                  0x000018         0x18 build/default/production/DriverPicTrainer/config.o
+                  0x000018         0x18 build/default/debug/DriverPicTrainer/config.o
  .debug_aranges
-                  0x000030         0x18 build/default/production/DriverPicTrainer/idle.o
+                  0x000030         0x18 build/default/debug/DriverPicTrainer/idle.o
  .debug_aranges
-                  0x000048         0x18 build/default/production/DriverPicTrainer/pwm.o
+                  0x000048         0x18 build/default/debug/DriverPicTrainer/pwm.o
  .debug_aranges
-                  0x000060         0x18 build/default/production/DriverPicTrainer/uart.o
+                  0x000060         0x18 build/default/debug/DriverPicTrainer/uart.o
  .debug_aranges
-                  0x000078         0x18 build/default/production/DriverPicTrainer/uart2.o
+                  0x000078         0x18 build/default/debug/DriverPicTrainer/uart2.o
  .debug_aranges
-                  0x000090         0x18 build/default/production/btconfig.o
+                  0x000090         0x18 build/default/debug/btconfig.o
  .debug_aranges
-                  0x0000a8         0x18 build/default/production/main.o
+                  0x0000a8         0x18 build/default/debug/main.o
  .debug_aranges
-                  0x0000c0         0x18 build/default/production/timers.o
+                  0x0000c0         0x18 build/default/debug/timers.o
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -1660,7 +1701,7 @@ LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30
 LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-c-elf.a
 END GROUP
-OUTPUT(dist/default/production/BTdriver.X.production.elf elf32-pic30)
+OUTPUT(dist/default/debug/BTdriver.X.debug.elf elf32-pic30)
 LOAD FGS
 LOAD FBS
 LOAD jump_table
@@ -1670,44 +1711,44 @@ LOAD data_init
 .debug_pubtypes
                   0x0000d8        0x487
  .debug_pubtypes
-                  0x0000d8         0x52 build/default/production/DriverPicTrainer/adc.o
+                  0x0000d8         0x52 build/default/debug/DriverPicTrainer/adc.o
  .debug_pubtypes
-                  0x00012a         0x54 build/default/production/DriverPicTrainer/config.o
+                  0x00012a         0x54 build/default/debug/DriverPicTrainer/config.o
  .debug_pubtypes
-                  0x00017e         0x2f build/default/production/DriverPicTrainer/idle.o
+                  0x00017e         0x2f build/default/debug/DriverPicTrainer/idle.o
  .debug_pubtypes
-                  0x0001ad         0x7b build/default/production/DriverPicTrainer/pwm.o
+                  0x0001ad         0x7b build/default/debug/DriverPicTrainer/pwm.o
  .debug_pubtypes
-                  0x000228        0x108 build/default/production/DriverPicTrainer/uart.o
+                  0x000228        0x108 build/default/debug/DriverPicTrainer/uart.o
  .debug_pubtypes
-                  0x000330         0xeb build/default/production/DriverPicTrainer/uart2.o
+                  0x000330         0xeb build/default/debug/DriverPicTrainer/uart2.o
  .debug_pubtypes
-                  0x00041b         0x6f build/default/production/btconfig.o
+                  0x00041b         0x6f build/default/debug/btconfig.o
  .debug_pubtypes
-                  0x00048a         0x1f build/default/production/main.o
+                  0x00048a         0x1f build/default/debug/main.o
  .debug_pubtypes
-                  0x0004a9         0xb6 build/default/production/timers.o
+                  0x0004a9         0xb6 build/default/debug/timers.o
 
 __c30_signature
                   0x00055f         0x8a
  __c30_signature
-                  0x00055f          0x6 build/default/production/DriverPicTrainer/adc.o
+                  0x00055f          0x6 build/default/debug/DriverPicTrainer/adc.o
  __c30_signature
-                  0x000565          0x6 build/default/production/DriverPicTrainer/config.o
+                  0x000565          0x6 build/default/debug/DriverPicTrainer/config.o
  __c30_signature
-                  0x00056b          0x6 build/default/production/DriverPicTrainer/idle.o
+                  0x00056b          0x6 build/default/debug/DriverPicTrainer/idle.o
  __c30_signature
-                  0x000571          0x6 build/default/production/DriverPicTrainer/pwm.o
+                  0x000571          0x6 build/default/debug/DriverPicTrainer/pwm.o
  __c30_signature
-                  0x000577          0x6 build/default/production/DriverPicTrainer/uart.o
+                  0x000577          0x6 build/default/debug/DriverPicTrainer/uart.o
  __c30_signature
-                  0x00057d          0x6 build/default/production/DriverPicTrainer/uart2.o
+                  0x00057d          0x6 build/default/debug/DriverPicTrainer/uart2.o
  __c30_signature
-                  0x000583          0x6 build/default/production/btconfig.o
+                  0x000583          0x6 build/default/debug/btconfig.o
  __c30_signature
-                  0x000589          0x6 build/default/production/main.o
+                  0x000589          0x6 build/default/debug/main.o
  __c30_signature
-                  0x00058f          0x6 build/default/production/timers.o
+                  0x00058f          0x6 build/default/debug/timers.o
  __c30_signature
                   0x000595          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
@@ -1737,86 +1778,86 @@ __c30_signature
  __c30_signature
                   0x0005e3          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
 
-.nbss               0x0800         0x30
- .nbss              0x0800         0x10 build/default/production/main.o
- .nbss              0x0810         0x10 build/default/production/timers.o
- .nbss              0x0820          0x8 build/default/production/DriverPicTrainer/uart.o
- .nbss              0x0828          0x8 build/default/production/DriverPicTrainer/uart2.o
+.nbss               0x0850         0x30
+ .nbss              0x0850         0x10 build/default/debug/main.o
+ .nbss              0x0860         0x10 build/default/debug/timers.o
+ .nbss              0x0870          0x8 build/default/debug/DriverPicTrainer/uart.o
+ .nbss              0x0878          0x8 build/default/debug/DriverPicTrainer/uart2.o
 
-.bss                0x0830        0x3e8
- .bss               0x0830        0x1f4 build/default/production/DriverPicTrainer/uart.o
- .bss               0x0a24        0x1f4 build/default/production/DriverPicTrainer/uart2.o
+.bss                0x0880        0x3e8
+ .bss               0x0880        0x1f4 build/default/debug/DriverPicTrainer/uart.o
+ .bss               0x0a74        0x1f4 build/default/debug/DriverPicTrainer/uart2.o
 
-.data               0x0c18         0x3c
- .data              0x0c18         0x22 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
- .data              0x0c3a         0x1a c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
+.data               0x0c68         0x3c
+ .data              0x0c68         0x22 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
+ .data              0x0c8a         0x1a c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
 
 .config_JTAGEN    0xf8000e          0x2
  .config_JTAGEN
-                  0xf8000e          0x2 build/default/production/DriverPicTrainer/config.o
+                  0xf8000e          0x2 build/default/debug/DriverPicTrainer/config.o
 
 .config_PWMPIN    0xf8000c          0x2
  .config_PWMPIN
-                  0xf8000c          0x2 build/default/production/DriverPicTrainer/config.o
+                  0xf8000c          0x2 build/default/debug/DriverPicTrainer/config.o
 
 .config_FWDTEN    0xf8000a          0x2
  .config_FWDTEN
-                  0xf8000a          0x2 build/default/production/DriverPicTrainer/config.o
+                  0xf8000a          0x2 build/default/debug/DriverPicTrainer/config.o
 
 .config_FCKSM     0xf80008          0x2
- .config_FCKSM    0xf80008          0x2 build/default/production/DriverPicTrainer/config.o
+ .config_FCKSM    0xf80008          0x2 build/default/debug/DriverPicTrainer/config.o
 
 .config_IESO      0xf80006          0x2
- .config_IESO     0xf80006          0x2 build/default/production/DriverPicTrainer/config.o
+ .config_IESO     0xf80006          0x2 build/default/debug/DriverPicTrainer/config.o
 
 .ivt._U1TXInterrupt
                   0x00002c          0x2
  .ivt._U1TXInterrupt
-                  0x00002c          0x2 build/default/production/DriverPicTrainer/uart.o
+                  0x00002c          0x2 build/default/debug/DriverPicTrainer/uart.o
 
 .ivt._U1RXInterrupt
                   0x00002a          0x2
  .ivt._U1RXInterrupt
-                  0x00002a          0x2 build/default/production/DriverPicTrainer/uart.o
+                  0x00002a          0x2 build/default/debug/DriverPicTrainer/uart.o
 
 .ivt._U2TXInterrupt
                   0x000052          0x2
  .ivt._U2TXInterrupt
-                  0x000052          0x2 build/default/production/DriverPicTrainer/uart2.o
+                  0x000052          0x2 build/default/debug/DriverPicTrainer/uart2.o
 
 .ivt._U2RXInterrupt
                   0x000050          0x2
  .ivt._U2RXInterrupt
-                  0x000050          0x2 build/default/production/DriverPicTrainer/uart2.o
+                  0x000050          0x2 build/default/debug/DriverPicTrainer/uart2.o
 
 .ivt._T1Interrupt
                   0x00001a          0x2
  .ivt._T1Interrupt
-                  0x00001a          0x2 build/default/production/timers.o
+                  0x00001a          0x2 build/default/debug/timers.o
 
 .ivt._T2Interrupt
                   0x000022          0x2
  .ivt._T2Interrupt
-                  0x000022          0x2 build/default/production/timers.o
+                  0x000022          0x2 build/default/debug/timers.o
 
 .const              0x8cba         0x18 load address 0x000cba  
- .const             0x8cba         0x18 build/default/production/btconfig.o
+ .const             0x8cba         0x18 build/default/debug/btconfig.o
 
 .text             0x000cd2        0x9f0
- .text            0x000cd2        0x22c build/default/production/DriverPicTrainer/pwm.o
+ .text            0x000cd2        0x22c build/default/debug/DriverPicTrainer/pwm.o
                   0x000cd2                  _inicializarPWM
                   0x000d46                  _setFrecuencia
                   0x000dc2                  _setDcPWM
                   0x000e26                  _activarPWM
                   0x000e90                  _desactivarPWM
- .text            0x000efe        0x1c8 build/default/production/btconfig.o
+ .text            0x000efe        0x1c8 build/default/debug/btconfig.o
                   0x000efe                  _initializeBT
                   0x000f1c                  _setBTbaudrate
                   0x001042                  _setBTname
                   0x001090                  _setBTpin
                   0x0010aa                  _sendBT
                   0x0010ba                  _getcharBT
- .text            0x0010c6        0x1c6 build/default/production/DriverPicTrainer/uart2.o
+ .text            0x0010c6        0x1c6 build/default/debug/DriverPicTrainer/uart2.o
                   0x0010c6                  _inicializarUART2
                   0x00116c                  _procesarUART2
                   0x00117e                  _putsUART2
@@ -1825,7 +1866,7 @@ __c30_signature
                   0x0011f8                  __U2RXInterrupt
                   0x001242                  _ponerEnColaTransmisionUART2
                   0x001282                  _transmitirUART2
- .text            0x00128c        0x1c2 build/default/production/DriverPicTrainer/uart.o
+ .text            0x00128c        0x1c2 build/default/debug/DriverPicTrainer/uart.o
                   0x00128c                  _inicializarUART
                   0x00132e                  _procesarUART
                   0x001340                  _putsUART
@@ -1834,7 +1875,7 @@ __c30_signature
                   0x0013ba                  __U1RXInterrupt
                   0x001404                  _ponerEnColaTransmisionUART
                   0x001444                  _transmitirUART
- .text            0x00144e        0x118 build/default/production/timers.o
+ .text            0x00144e        0x118 build/default/debug/timers.o
                   0x00144e                  _iniTimer1
                   0x001476                  _iniTimer2
                   0x00149e                  _endTimer1
@@ -1842,18 +1883,18 @@ __c30_signature
                   0x0014ea                  _delay
                   0x001536                  __T1Interrupt
                   0x00154e                  __T2Interrupt
- .text            0x001566         0xe8 build/default/production/DriverPicTrainer/idle.o
+ .text            0x001566         0xe8 build/default/debug/DriverPicTrainer/idle.o
                   0x001566                  _inicializarTareaIdle
                   0x00163c                  _tareaIdle
- .text            0x00164e         0x74 build/default/production/main.o
+ .text            0x00164e         0x74 build/default/debug/main.o
                   0x00164e                  _main
 
 .dinit            0x0016c2         0x5c
  .dinit           0x0016c2         0x5c data_init
 
 .text             0x00171e         0x9e
- .text            0x00171e         0x54 build/default/production/DriverPicTrainer/config.o
+ .text            0x00171e         0x54 build/default/debug/DriverPicTrainer/config.o
                   0x00171e                  _inicializarReloj
- .text            0x001772         0x4a build/default/production/DriverPicTrainer/adc.o
+ .text            0x001772         0x4a build/default/debug/DriverPicTrainer/adc.o
                   0x001772                  _inicializarADCPolling
                   0x00179e                  _leerADCPolling
